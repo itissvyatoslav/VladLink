@@ -7,3 +7,22 @@
 //
 
 import Foundation
+import UIKit
+
+class MessageViewController: UIViewController{
+    var phone = "89137749703"
+    
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var messageTextField: UITextField!
+    @IBAction func previousViewController(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setLabel()
+    }
+    
+    private func setLabel(){
+        messageLabel.text = "Введите код из сообщения, отправленного на номер \n\(phone)"
+    }
+}

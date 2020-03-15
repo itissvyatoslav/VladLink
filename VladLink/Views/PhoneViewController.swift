@@ -10,7 +10,27 @@ import Foundation
 import UIKit
 
 class PhoneViewController: UIViewController{
+    var phone = "89137749703"
+    @IBOutlet weak var phoneButton: UIButton!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBAction func callAction(_ sender: Any) {
+        if let url = URL(string: "tel://+74951206695"),
+            UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    @IBAction func previousViewControllerAction(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setLabels()
+    }
+    
+    private func setLabels(){
+        phoneLabel.text = "В течении 2-х минут позвоните с номера  \n\(phone)\nна бесплатный номер."
+        infoLabel.text = "После набора соединение автоматически сбросится (звонок будет бесплатным для вас)."
     }
 }
