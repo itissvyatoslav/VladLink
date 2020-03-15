@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		EBB3DE8E241CA28F004247F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DE8D241CA28F004247F8 /* AppDelegate.swift */; };
 		EBB3DE90241CA28F004247F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DE8F241CA28F004247F8 /* SceneDelegate.swift */; };
-		EBB3DE92241CA28F004247F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DE91241CA28F004247F8 /* ViewController.swift */; };
+		EBB3DE92241CA28F004247F8 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DE91241CA28F004247F8 /* GreetingViewController.swift */; };
 		EBB3DE95241CA28F004247F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB3DE93241CA28F004247F8 /* Main.storyboard */; };
 		EBB3DE97241CA295004247F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB3DE96241CA295004247F8 /* Assets.xcassets */; };
 		EBB3DE9A241CA295004247F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB3DE98241CA295004247F8 /* LaunchScreen.storyboard */; };
+		EBB3DEA8241CE3B3004247F8 /* AddPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DEA7241CE3B3004247F8 /* AddPhoneViewController.swift */; };
+		EBB3DEAC241E6227004247F8 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DEAB241E6227004247F8 /* PhoneViewController.swift */; };
+		EBB3DEAE241E6238004247F8 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DEAD241E6238004247F8 /* MessageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EBB3DE8A241CA28F004247F8 /* VladLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VladLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB3DE8D241CA28F004247F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB3DE8F241CA28F004247F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EBB3DE91241CA28F004247F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBB3DE91241CA28F004247F8 /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
 		EBB3DE94241CA28F004247F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBB3DE96241CA295004247F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB3DE99241CA295004247F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBB3DE9B241CA295004247F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB3DEA7241CE3B3004247F8 /* AddPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneViewController.swift; sourceTree = "<group>"; };
+		EBB3DEAB241E6227004247F8 /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		EBB3DEAD241E6238004247F8 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,34 @@
 		EBB3DE8C241CA28F004247F8 /* VladLink */ = {
 			isa = PBXGroup;
 			children = (
+				EBB3DE93241CA28F004247F8 /* Main.storyboard */,
+				EBB3DEA1241CA2BE004247F8 /* Views */,
+				EBB3DEA6241CBCC0004247F8 /* Service */,
 				EBB3DE8D241CA28F004247F8 /* AppDelegate.swift */,
 				EBB3DE8F241CA28F004247F8 /* SceneDelegate.swift */,
-				EBB3DE91241CA28F004247F8 /* ViewController.swift */,
-				EBB3DE93241CA28F004247F8 /* Main.storyboard */,
 				EBB3DE96241CA295004247F8 /* Assets.xcassets */,
 				EBB3DE98241CA295004247F8 /* LaunchScreen.storyboard */,
 				EBB3DE9B241CA295004247F8 /* Info.plist */,
 			);
 			path = VladLink;
+			sourceTree = "<group>";
+		};
+		EBB3DEA1241CA2BE004247F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EBB3DE91241CA28F004247F8 /* GreetingViewController.swift */,
+				EBB3DEA7241CE3B3004247F8 /* AddPhoneViewController.swift */,
+				EBB3DEAB241E6227004247F8 /* PhoneViewController.swift */,
+				EBB3DEAD241E6238004247F8 /* MessageViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EBB3DEA6241CBCC0004247F8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBB3DE92241CA28F004247F8 /* ViewController.swift in Sources */,
+				EBB3DE92241CA28F004247F8 /* GreetingViewController.swift in Sources */,
+				EBB3DEAC241E6227004247F8 /* PhoneViewController.swift in Sources */,
+				EBB3DEA8241CE3B3004247F8 /* AddPhoneViewController.swift in Sources */,
 				EBB3DE8E241CA28F004247F8 /* AppDelegate.swift in Sources */,
+				EBB3DEAE241E6238004247F8 /* MessageViewController.swift in Sources */,
 				EBB3DE90241CA28F004247F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NA6VF3HCZ5;
 				INFOPLIST_FILE = VladLink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +331,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NA6VF3HCZ5;
 				INFOPLIST_FILE = VladLink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

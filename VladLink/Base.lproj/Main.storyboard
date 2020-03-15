@@ -1,24 +1,269 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Greeting View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GreetingViewController" customModule="VladLink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VladLinkBigLogo" translatesAutoresizingMaskIntoConstraints="NO" id="HzD-MD-yRH">
+                                <rect key="frame" x="80" y="84" width="254" height="149"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пожалуйста, выберите ваш статус" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8e-L5-Kqu">
+                                <rect key="frame" x="40" y="313.5" width="334" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaQ-s9-bjo">
+                                <rect key="frame" x="40" y="354" width="334" height="30"/>
+                                <color key="backgroundColor" red="0.091278024020000001" green="0.4943004251" blue="0.75826513770000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="contentStretch" x="0.10000000000000001" y="0.0" width="1" height="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Я АБОНЕНТ ВЛАДЛИНК">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PtE-BD-HGB" kind="show" identifier="abonentSeque" id="fRm-Ac-mrV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAF-Vz-wLD">
+                                <rect key="frame" x="40" y="394" width="334" height="30"/>
+                                <color key="backgroundColor" red="0.91469603779999997" green="0.31367999320000001" blue="0.11237018560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Я ЕЩЕ НЕ АБОНЕНТ ВЛАДЛИНК">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="notUserActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OMR-QF-Y2w"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать в приложение Владлинк!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ml2-HH-EzD">
+                                <rect key="frame" x="40" y="241" width="334" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCU-OH-kbX">
+                                <rect key="frame" x="321" y="787" width="53" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="NtS-43-j6U"/>
+                                    <constraint firstAttribute="width" secondItem="bCU-OH-kbX" secondAttribute="height" multiplier="53:55" id="VXE-JM-jsr"/>
+                                    <constraint firstAttribute="width" constant="53" id="uFJ-Lb-WtM"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="callLogo"/>
+                                <connections>
+                                    <action selector="callCentrActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mUK-6w-OsB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="o8e-L5-Kqu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="36E-Kf-gpM"/>
+                            <constraint firstItem="HzD-MD-yRH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="3xL-08-EQ4"/>
+                            <constraint firstItem="Ml2-HH-EzD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4bB-7W-qYT"/>
+                            <constraint firstItem="Ml2-HH-EzD" firstAttribute="top" secondItem="HzD-MD-yRH" secondAttribute="bottom" constant="8" symbolic="YES" id="7gt-bj-Q3D"/>
+                            <constraint firstItem="o8e-L5-Kqu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B34-wa-dfj"/>
+                            <constraint firstItem="Ml2-HH-EzD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FvW-Qg-Laa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gaQ-s9-bjo" secondAttribute="trailing" id="Ka8-fd-8bT"/>
+                            <constraint firstItem="o8e-L5-Kqu" firstAttribute="top" secondItem="Ml2-HH-EzD" secondAttribute="bottom" constant="15" id="Mu7-82-w6X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bCU-OH-kbX" secondAttribute="trailing" constant="40" id="NyV-n5-ir2"/>
+                            <constraint firstItem="gaQ-s9-bjo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="QB6-0j-2tL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TAF-Vz-wLD" secondAttribute="trailing" id="RrV-yP-FEn"/>
+                            <constraint firstItem="gaQ-s9-bjo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X3i-PW-GWd"/>
+                            <constraint firstItem="bCU-OH-kbX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-20" id="Y0h-my-YKC"/>
+                            <constraint firstItem="TAF-Vz-wLD" firstAttribute="top" secondItem="gaQ-s9-bjo" secondAttribute="bottom" constant="10" id="YKw-vY-Nh5"/>
+                            <constraint firstItem="TAF-Vz-wLD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aJX-Z0-TBB"/>
+                            <constraint firstItem="TAF-Vz-wLD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="gUk-Jb-2dg"/>
+                            <constraint firstItem="gaQ-s9-bjo" firstAttribute="top" secondItem="o8e-L5-Kqu" secondAttribute="bottom" constant="20" id="heZ-NN-bxH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HzD-MD-yRH" secondAttribute="trailing" constant="80" id="ksj-Up-SCP"/>
+                            <constraint firstItem="HzD-MD-yRH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="mSm-Jh-Lt6"/>
+                            <constraint firstItem="HzD-MD-yRH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nUk-AA-MHo"/>
+                            <constraint firstAttribute="trailing" secondItem="Ml2-HH-EzD" secondAttribute="trailing" constant="40" id="tWZ-Rs-9K1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+        </scene>
+        <!--Add Phone View Controller-->
+        <scene sceneID="19Y-QD-vhj">
+            <objects>
+                <viewController id="PtE-BD-HGB" customClass="AddPhoneViewController" customModule="VladLink" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lKh-LU-zpr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите ваш номер телефона" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsA-SC-Ux6">
+                                <rect key="frame" x="20" y="20" width="374" height="29"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F6B-Ul-Cn0">
+                                <rect key="frame" x="20" y="64" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="address-line2"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Способ подтверждения" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4j4-vC-rTJ">
+                                <rect key="frame" x="20" y="138" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ma-Mf-GAQ">
+                                <rect key="frame" x="130" y="269" width="154" height="30"/>
+                                <color key="backgroundColor" red="0.091492913659999994" green="0.4942803979" blue="0.76631790399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="ДАЛЕЕ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextViewControllerAction:" destination="PtE-BD-HGB" eventType="touchUpInside" id="xGz-Lv-8iQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6t-KN-6vv">
+                                <rect key="frame" x="130" y="309" width="154" height="30"/>
+                                <color key="backgroundColor" red="0.91469603779999997" green="0.31367999320000001" blue="0.11237018560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="НАЗАД">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousViewControllerAction:" destination="PtE-BD-HGB" eventType="touchUpInside" id="QAo-hG-Y47"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Звонок на бесплатный номер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXp-uy-L5l">
+                                <rect key="frame" x="20" y="182" width="251" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подтверждение по СМС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azK-En-LNr">
+                                <rect key="frame" x="20" y="217" width="208" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bd7-ok-bzm">
+                                <rect key="frame" x="345" y="177.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switch1Action:" destination="PtE-BD-HGB" eventType="valueChanged" id="nmr-qP-sQ2"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z9r-Y3-pmi" userLabel="Second Switch">
+                                <rect key="frame" x="345" y="212.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switch2Action:" destination="PtE-BD-HGB" eventType="valueChanged" id="Fzl-wG-dq8"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7Ma-Mf-GAQ" firstAttribute="centerX" secondItem="lKh-LU-zpr" secondAttribute="centerX" id="0rh-qw-dhF"/>
+                            <constraint firstItem="LXp-uy-L5l" firstAttribute="leading" secondItem="TR5-Al-rdj" secondAttribute="leading" constant="20" id="1Wq-Ca-DPg"/>
+                            <constraint firstItem="TR5-Al-rdj" firstAttribute="trailing" secondItem="bd7-ok-bzm" secondAttribute="trailing" constant="20" id="28f-jh-7ux"/>
+                            <constraint firstItem="bd7-ok-bzm" firstAttribute="centerY" secondItem="LXp-uy-L5l" secondAttribute="centerY" id="4vA-hh-Yh4"/>
+                            <constraint firstItem="BsA-SC-Ux6" firstAttribute="top" secondItem="TR5-Al-rdj" secondAttribute="top" constant="20" id="C21-YL-72v"/>
+                            <constraint firstItem="g6t-KN-6vv" firstAttribute="top" secondItem="7Ma-Mf-GAQ" secondAttribute="bottom" constant="10" id="EBG-Hp-qZr"/>
+                            <constraint firstItem="TR5-Al-rdj" firstAttribute="trailing" secondItem="BsA-SC-Ux6" secondAttribute="trailing" constant="20" id="NPW-3n-n5g"/>
+                            <constraint firstItem="azK-En-LNr" firstAttribute="leading" secondItem="TR5-Al-rdj" secondAttribute="leading" constant="20" id="PA8-LJ-gcL"/>
+                            <constraint firstItem="g6t-KN-6vv" firstAttribute="centerX" secondItem="lKh-LU-zpr" secondAttribute="centerX" id="ViC-TJ-geZ"/>
+                            <constraint firstItem="g6t-KN-6vv" firstAttribute="leading" secondItem="TR5-Al-rdj" secondAttribute="leading" constant="130" id="WTH-eR-KEt"/>
+                            <constraint firstItem="7Ma-Mf-GAQ" firstAttribute="leading" secondItem="TR5-Al-rdj" secondAttribute="leading" constant="130" id="cyy-kJ-C4M"/>
+                            <constraint firstItem="F6B-Ul-Cn0" firstAttribute="leading" secondItem="TR5-Al-rdj" secondAttribute="leading" constant="20" id="dre-uu-oEg"/>
+                            <constraint firstItem="TR5-Al-rdj" firstAttribute="trailing" secondItem="7Ma-Mf-GAQ" secondAttribute="trailing" constant="130" id="e4v-Yg-PRi"/>
+                            <constraint firstItem="TR5-Al-rdj" firstAttribute="trailing" secondItem="g6t-KN-6vv" secondAttribute="trailing" constant="130" id="f6b-nn-oQS"/>
+                            <constraint firstItem="LXp-uy-L5l" firstAttribute="top" secondItem="4j4-vC-rTJ" secondAttribute="bottom" constant="20" id="ieo-Rb-xoQ"/>
+                            <constraint firstItem="azK-En-LNr" firstAttribute="top" secondItem="LXp-uy-L5l" secondAttribute="bottom" constant="13" id="l6p-cN-GAj"/>
+                            <constraint firstItem="4j4-vC-rTJ" firstAttribute="leading" secondItem="TR5-Al-rdj" secondAttribute="leading" constant="20" id="lCS-qq-UXN"/>
+                            <constraint firstItem="4j4-vC-rTJ" firstAttribute="centerX" secondItem="lKh-LU-zpr" secondAttribute="centerX" id="m1t-vW-TBW"/>
+                            <constraint firstItem="BsA-SC-Ux6" firstAttribute="leading" secondItem="TR5-Al-rdj" secondAttribute="leading" constant="20" id="mGW-bj-cV9"/>
+                            <constraint firstItem="TR5-Al-rdj" firstAttribute="trailing" secondItem="4j4-vC-rTJ" secondAttribute="trailing" constant="20" id="ndS-fU-v42"/>
+                            <constraint firstItem="7Ma-Mf-GAQ" firstAttribute="top" secondItem="azK-En-LNr" secondAttribute="bottom" constant="30" id="qHh-Nx-Dp0"/>
+                            <constraint firstItem="F6B-Ul-Cn0" firstAttribute="top" secondItem="BsA-SC-Ux6" secondAttribute="bottom" constant="15" id="sDG-Fk-d43"/>
+                            <constraint firstItem="BsA-SC-Ux6" firstAttribute="centerX" secondItem="lKh-LU-zpr" secondAttribute="centerX" id="sMJ-9A-N61"/>
+                            <constraint firstItem="TR5-Al-rdj" firstAttribute="trailing" secondItem="Z9r-Y3-pmi" secondAttribute="trailing" constant="20" id="wY2-pf-Zs7"/>
+                            <constraint firstItem="TR5-Al-rdj" firstAttribute="trailing" secondItem="F6B-Ul-Cn0" secondAttribute="trailing" constant="20" id="yUB-PO-0lh"/>
+                            <constraint firstItem="4j4-vC-rTJ" firstAttribute="top" secondItem="F6B-Ul-Cn0" secondAttribute="bottom" constant="40" id="zPR-0Q-VwK"/>
+                            <constraint firstItem="azK-En-LNr" firstAttribute="centerY" secondItem="Z9r-Y3-pmi" secondAttribute="centerY" id="zVv-hm-C5z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TR5-Al-rdj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TSn-96-yuE"/>
+                    <connections>
+                        <outlet property="firstSwitch" destination="bd7-ok-bzm" id="5bB-f8-xtc"/>
+                        <outlet property="phoneTextField" destination="F6B-Ul-Cn0" id="a7K-Oo-0cZ"/>
+                        <outlet property="secondSwitch" destination="Z9r-Y3-pmi" id="TFB-Gv-YQb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="unn-HR-vji" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837.68115942028987" y="110.49107142857143"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZTh-Hf-iVX">
+            <objects>
+                <viewController storyboardIdentifier="messageVC" id="uTX-3U-02b" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sly-0c-xYt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MessageVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnx-xE-KM2">
+                                <rect key="frame" x="186" y="164" width="91" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="K1B-rz-ViP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eOj-Gj-PpP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6WD-sU-39A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536" y="420"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fDW-Nl-C3G">
+            <objects>
+                <viewController storyboardIdentifier="callVC" id="XVx-rX-fpG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dbR-ho-T7J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PhoneVC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjA-Qg-Gxi">
+                                <rect key="frame" x="186" y="110" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="5bc-ol-X8y"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aUi-yh-Zcf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ioH-bo-OUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1534.7826086956522" y="-240.40178571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="VladLinkBigLogo" width="409" height="149"/>
+        <image name="callLogo" width="1024" height="1024"/>
+    </resources>
 </document>
