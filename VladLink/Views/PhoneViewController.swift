@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class PhoneViewController: UIViewController{
-    var phone = "89137749703"
+    var phone = ""
     @IBOutlet weak var phoneButton: UIButton!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!

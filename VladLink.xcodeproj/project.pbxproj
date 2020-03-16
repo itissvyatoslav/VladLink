@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB93B27D241F991E0082022E /* PersonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93B27C241F991E0082022E /* PersonData.swift */; };
 		EBB3DE8E241CA28F004247F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DE8D241CA28F004247F8 /* AppDelegate.swift */; };
 		EBB3DE90241CA28F004247F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DE8F241CA28F004247F8 /* SceneDelegate.swift */; };
 		EBB3DE92241CA28F004247F8 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DE91241CA28F004247F8 /* GreetingViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB93B27C241F991E0082022E /* PersonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonData.swift; sourceTree = "<group>"; };
 		EBB3DE8A241CA28F004247F8 /* VladLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VladLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB3DE8D241CA28F004247F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB3DE8F241CA28F004247F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB93B27B241F99030082022E /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB93B27C241F991E0082022E /* PersonData.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		EBB3DE81241CA28F004247F8 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 		EBB3DE8C241CA28F004247F8 /* VladLink */ = {
 			isa = PBXGroup;
 			children = (
+				EB93B27B241F99030082022E /* DataModel */,
 				EBB3DE93241CA28F004247F8 /* Main.storyboard */,
 				EBB3DEA1241CA2BE004247F8 /* Views */,
 				EBB3DEA6241CBCC0004247F8 /* Service */,
@@ -168,6 +179,7 @@
 				EBB3DEA8241CE3B3004247F8 /* AddPhoneViewController.swift in Sources */,
 				EBB3DE8E241CA28F004247F8 /* AppDelegate.swift in Sources */,
 				EBB3DEAE241E6238004247F8 /* MessageViewController.swift in Sources */,
+				EB93B27D241F991E0082022E /* PersonData.swift in Sources */,
 				EBB3DE90241CA28F004247F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

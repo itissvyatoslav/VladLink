@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class MessageViewController: UIViewController{
-    var phone = "89137749703"
+    var phone = ""
     
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var messageTextField: UITextField!
