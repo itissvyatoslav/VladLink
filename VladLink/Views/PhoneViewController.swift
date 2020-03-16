@@ -11,11 +11,12 @@ import UIKit
 
 class PhoneViewController: UIViewController{
     var phone = ""
+    var phoneCall = ""
     @IBOutlet weak var phoneButton: UIButton!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBAction func callAction(_ sender: Any) {
-        if let url = URL(string: "tel://+74951206695"),
+        if let url = URL(string: "tel://\(phoneCall)"),
             UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
@@ -32,5 +33,6 @@ class PhoneViewController: UIViewController{
     private func setLabels(){
         phoneLabel.text = "В течении 2-х минут позвоните с номера  \n\(phone)\nна бесплатный номер."
         infoLabel.text = "После набора соединение автоматически сбросится (звонок будет бесплатным для вас)."
+        phoneButton.setTitle(phoneCall, for: .normal)
     }
 }

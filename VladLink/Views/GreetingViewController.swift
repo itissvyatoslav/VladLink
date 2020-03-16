@@ -9,6 +9,8 @@
 import UIKit
 
 class GreetingViewController: UIViewController {
+    let ns = JSONAddPhoneVC()
+    
     let titleWindow = "Внимание!"
     let messageWindow =   """
                     Позвоните в контактный центр по телефону
@@ -28,6 +30,7 @@ class GreetingViewController: UIViewController {
     
     @IBAction func notUserActionButton(_ sender: Any) {
         infoWindow()
+        ns.messageRequest(phoneNumber: "+7944444444")
     }
     
     private func infoWindow(){
