@@ -172,7 +172,6 @@ class JSONAddPhoneVC{
             print("error url")
             return
         }
-        print(parametrs)
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Accept")
@@ -181,6 +180,7 @@ class JSONAddPhoneVC{
             return
         }
         request.httpBody = httpBody
+        print(parametrs)
         let session = URLSession.shared
         session.dataTask(with: request) { (data, response, error) in
             if let response = response{
