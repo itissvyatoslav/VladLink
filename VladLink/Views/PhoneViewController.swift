@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class PhoneViewController: UIViewController{
+    let network = JSONAddPhoneVC()
     let person = PersonData.sharedData
     var phone = ""
     var phoneCall = ""
@@ -26,6 +27,11 @@ class PhoneViewController: UIViewController{
     @IBAction func previousViewControllerAction(_ sender: Any) {
         self.dismiss(animated: true)
     }
+    
+    @IBAction func nextViewController(_ sender: Any) {
+      //  network.postPhoneAuth(phoneNumber: person.phoneNumber, request_id: person.request_id)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

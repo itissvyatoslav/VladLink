@@ -18,8 +18,12 @@ class JSONAddPhoneVC{
     
     struct DataStruct: Codable {
         var phone: String?
-        var requestid: String
+        var requestid: String?
         var code: String?
+        var auth_token: String?
+        var name: String?
+        var uid: Int?
+        var public_uids = [String?]()
         
         enum CodingKeys: String, CodingKey{
             case phone
@@ -61,7 +65,7 @@ class JSONAddPhoneVC{
                         
                         let json = try JSONDecoder().decode(postMessageDataRequest.self, from: data)
                         if json.status == 200 {
-                            self.person.request_id = json.data!.requestid
+                            self.person.request_id = json.data!.requestid!
                             self.person.callPhoneNumber = json.data!.phone!
                         } else {
                             print("status != 200")
@@ -107,7 +111,7 @@ class JSONAddPhoneVC{
                         
                         let json = try JSONDecoder().decode(postMessageDataRequest.self, from: data)
                         if json.status == 200 {
-                            self.person.request_id = json.data!.requestid
+                            self.person.request_id = json.data!.requestid!
                             self.person.callPhoneNumber = json.data!.phone!
                         } else {
                             print("status != 200")
@@ -152,8 +156,9 @@ class JSONAddPhoneVC{
                     do {
                         
                         let json = try JSONDecoder().decode(postMessageDataRequest.self, from: data)
+                        print(json)
                         if json.status == 200 {
-                            self.person.request_id = json.data!.requestid
+                            self.person.request_id = json.data!.requestid!
                         } else {
                             print("status != 200")
                         }
@@ -166,40 +171,42 @@ class JSONAddPhoneVC{
     }
     
     func postMessageAuth(phoneNumber: String, request_id: String, code: String) {
-        let parametr = ["phone": "\(phoneNumber)", "request_id": "\(request_id)", "code": "\(code)"]
-        let parametrs = ["data": parametr]
         guard let url = URL(string: "https://test-api.vladlink.ru/v1/auth/subscribers/authByCode/check") else {
-            print("error url")
+            print("url error")
             return
         }
+        let parametrs = ["phone": phoneNumber, "request_id": request_id, "code": code]
+        let parametr = ["data": parametrs]
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Accept")
-        guard let httpBody = try? JSONSerialization.data(withJSONObject: parametrs, options: []) else {
-            print("JSONSerialization error")
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: parametr, options: []) else {
+            print("JSON error")
             return
         }
         request.httpBody = httpBody
-        print(parametrs)
+        
         let session = URLSession.shared
-        session.dataTask(with: request) { (data, response, error) in
+        session.dataTask(with: request){(data, response, error)  in
             if let response = response{
                 print(response)
             }
+            
             guard let data = data else {
                 print("data error")
                 return
             }
             do {
-                
                 let json = try JSONDecoder().decode(postMessageDataRequest.self, from: data)
-                print(json)
-                //      if json.status == 200 {
-                //          self.person.request_id = json.data!.request_id
-                //          self.person.callPhoneNumber = json.data!.phone!
-                //      } else {
-                //          print("status != 200")
-                //      }
+                //let json = try JSONSerialization.jsonObject(with: data, options: [])
+                // if json.status == 200 {
+                //    self.person.auth_token = (json.data?.auth_token)!
+                //    self.person.uid = (json.data?.uid)!
+                //    self.person.name = (json.data?.name)!
+                //    self.person.publicUids = (json.data!.public_uids) as! [String]
+                // }
+                print("!!!!! ---- \(json)")
+                
             } catch {
                 print(error)
             }
