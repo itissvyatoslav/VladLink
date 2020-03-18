@@ -9,5 +9,9 @@
 import Foundation
 
 class PersonData{
-    var personPhoneNumber = ""
+    var phoneNumber = ""
+    var request_id = ""
+    var callPhoneNumber = ""
+    static let sharedData = PersonData()
 }
+

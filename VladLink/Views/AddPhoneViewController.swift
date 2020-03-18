@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class AddPhoneViewController: UIViewController{
+    let person = PersonData.sharedData
+    let networkService = JSONAddPhoneVC()
     var phoneNumber = ""
     
     @IBOutlet weak var phoneTextField: UITextField!
@@ -17,18 +19,23 @@ class AddPhoneViewController: UIViewController{
     @IBOutlet weak var secondSwitch: UISwitch!
     
     @IBAction func nextViewControllerAction(_ sender: Any) {
+        phoneNumber = deformattedNumber(number: phoneTextField.text!)
+        person.phoneNumber = phoneNumber
         if firstSwitch.isOn {
+            networkService.postPhoneRequest(phoneNumber: phoneNumber)
             let vc = storyboard?.instantiateViewController(identifier: "callVC") as! PhoneViewController
             vc.phone = phoneTextField.text!
+            vc.phoneCall = person.callPhoneNumber
             self.present(vc, animated: true, completion: nil)
 
         } else {
+            networkService.postMessageRequest(phoneNumber: phoneNumber)
             let vc = storyboard?.instantiateViewController(identifier: "messageVC") as! MessageViewController
             vc.phone = phoneTextField.text!
             self.present(vc, animated: true, completion: nil)
         }
-        phoneNumber = deformattedNumber(number: phoneTextField.text!)
     }
+    
     @IBAction func previousViewControllerAction(_ sender: Any) {
         self.dismiss(animated: true)
     }
@@ -66,7 +73,7 @@ class AddPhoneViewController: UIViewController{
     
     private func deformattedNumber(number: String) -> String{
         var result = number.replacingOccurrences(of: " ", with: "")
-        result = result.replacingOccurrences(of: "(", with: "")
+        result = result.replacingOccurrences(of: "8(", with: "+7")
         result = result.replacingOccurrences(of: ")", with: "")
         result = result.replacingOccurrences(of: "-", with: "")
         return result

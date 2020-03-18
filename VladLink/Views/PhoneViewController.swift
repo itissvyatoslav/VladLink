@@ -10,8 +10,10 @@ import Foundation
 import UIKit
 
 class PhoneViewController: UIViewController{
+    let person = PersonData.sharedData
     var phone = ""
     var phoneCall = ""
+    
     @IBOutlet weak var phoneButton: UIButton!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!

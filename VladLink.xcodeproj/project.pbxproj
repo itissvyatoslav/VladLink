@@ -74,12 +74,12 @@
 		EBB3DE8C241CA28F004247F8 /* VladLink */ = {
 			isa = PBXGroup;
 			children = (
-				EB93B27B241F99030082022E /* DataModel */,
 				EBB3DE93241CA28F004247F8 /* Main.storyboard */,
 				EBB3DEA1241CA2BE004247F8 /* Views */,
 				EBB3DEA6241CBCC0004247F8 /* Service */,
-				EBB3DE8D241CA28F004247F8 /* AppDelegate.swift */,
+				EB93B27B241F99030082022E /* DataModel */,
 				EBB3DE8F241CA28F004247F8 /* SceneDelegate.swift */,
+				EBB3DE8D241CA28F004247F8 /* AppDelegate.swift */,
 				EBB3DE96241CA295004247F8 /* Assets.xcassets */,
 				EBB3DE98241CA295004247F8 /* LaunchScreen.storyboard */,
 				EBB3DE9B241CA295004247F8 /* Info.plist */,

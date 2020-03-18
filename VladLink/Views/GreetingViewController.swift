@@ -30,7 +30,6 @@ class GreetingViewController: UIViewController {
     
     @IBAction func notUserActionButton(_ sender: Any) {
         infoWindow()
-        ns.messageRequest(phoneNumber: "+7944444444")
     }
     
     private func infoWindow(){

@@ -238,6 +238,9 @@
                                 <state key="normal" title="ДАЛЕЕ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextViewController:" destination="uTX-3U-02b" eventType="touchUpInside" id="Z0v-PM-C8P"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvY-WO-ZcM">
                                 <rect key="frame" x="100" y="258.5" width="214" height="30"/>
