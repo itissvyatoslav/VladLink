@@ -10,15 +10,19 @@ import Foundation
 import UIKit
 
 class FirstEnterViewController: UIViewController {
-    let person = PersonData.sharedData
+    let network = JSONService()
+    let person = PersonModel.sharedData
     @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var billsStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setView()
+        network.getBills(auth_token: person.auth_token)
     }
     
     private func setView(){
         phoneNumberLabel.text = person.formatedPhoneNumber
     }
+    
 }

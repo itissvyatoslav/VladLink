@@ -9,7 +9,7 @@
 import Foundation
 
 class JSONAddPhoneVC{
-    let person = PersonData.sharedData
+    let person = PersonModel.sharedData
     
     struct postMessageDataRequest: Codable {
         var data:  DataStructRequest?
@@ -54,6 +54,7 @@ class JSONAddPhoneVC{
     }
     
     func postPhoneRequest(phoneNumber: String){
+        var semaphore = DispatchSemaphore (value: 0)
         
         let parametr = ["phone": "\(phoneNumber)"]
         let parametrs = ["data": parametr]
@@ -78,23 +79,26 @@ class JSONAddPhoneVC{
                 print("data error")
                 return
             }
-                do {
-                    
-                    let json = try JSONDecoder().decode(postMessageDataRequest.self, from: data)
-                    if json.status == 200 {
-                        self.person.request_id = json.data!.requestid!
-                        self.person.callPhoneNumber = json.data!.phone!
-                    } else {
-                        print("status != 200")
-                    }
-                } catch {
-                    print(error)
+            do {
+                
+                let json = try JSONDecoder().decode(postMessageDataRequest.self, from: data)
+                if json.status == 200 {
+                    self.person.request_id = json.data!.requestid!
+                    self.person.callPhoneNumber = json.data!.phone!
+                    semaphore.signal()
+                } else {
+                    print("status != 200")
                 }
+            } catch {
+                print(error)
+            }
         }.resume()
+        semaphore.wait()
         return
     }
     
     func postPhoneAuth(){
+        var semaphore = DispatchSemaphore (value: 0)
         let queue = DispatchQueue.global()
         let parametr = ["phone": "\(person.phoneNumber)", "request_id": "\(person.request_id)"]
         let parametrs = ["data": parametr]
@@ -129,6 +133,7 @@ class JSONAddPhoneVC{
                         self.person.uid = (json.data?.uid)!
                         self.person.name = (json.data?.name)!
                         self.person.publicUids = (json.data!.public_uids) as! [String]
+                        semaphore.signal()
                     } else {
                         print("status != 200")
                     }
@@ -136,6 +141,7 @@ class JSONAddPhoneVC{
                     print(error)
                 }
             }.resume()
+            semaphore.wait()
         }
     }
     
@@ -186,6 +192,8 @@ class JSONAddPhoneVC{
     }
     
     func postMessageAuth(phoneNumber: String, request_id: String, code: String) {
+        var semaphore = DispatchSemaphore (value: 0)
+        
         guard let url = URL(string: "https://test-api.vladlink.ru/v1/auth/subscribers/authByCode/check") else {
             print("url error")
             return
@@ -214,17 +222,19 @@ class JSONAddPhoneVC{
             do {
                 let json = try JSONDecoder().decode(postMessageDataAuth.self, from: data)
                 //let json = try JSONSerialization.jsonObject(with: data, options: []) as! postMessageDataAuth
-                 if json.status == 200 {
+                if json.status == 200 {
                     self.person.auth_token = (json.data?.auth_token)!
                     self.person.uid = (json.data?.uid)!
                     self.person.name = (json.data?.name)!
                     self.person.publicUids = (json.data!.public_uids) as! [String]
-                 }
+                    semaphore.signal()
+                }
                 //print("!!!!! ---- \(json)")
                 
             } catch {
                 print(error)
             }
         }.resume()
+        semaphore.wait()
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PersonData{
+class PersonModel{
     var phoneNumber = "" //Номер телефона
     var request_id = ""
     var callPhoneNumber = "" //Номер на который звонить
@@ -20,6 +20,6 @@ class PersonData{
     var formatedPhoneNumber = ""
     
     
-    static let sharedData = PersonData()
+    static let sharedData = PersonModel()
 }
 

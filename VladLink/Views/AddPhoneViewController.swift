@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class AddPhoneViewController: UIViewController{
-    let person = PersonData.sharedData
+    let person = PersonModel.sharedData
     let networkService = JSONAddPhoneVC()
     var phoneNumber = ""
     
@@ -25,7 +25,6 @@ class AddPhoneViewController: UIViewController{
         if phoneTextField.text == "" {infoWindow()} else{
             if firstSwitch.isOn {
                 networkService.postPhoneRequest(phoneNumber: phoneNumber)
-                sleep(2)
                 let vc = storyboard?.instantiateViewController(identifier: "callVC") as! PhoneViewController
                 vc.phone = phoneTextField.text!
                 vc.phoneCall = person.callPhoneNumber

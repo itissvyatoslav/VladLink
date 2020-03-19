@@ -11,7 +11,7 @@ import UIKit
 
 class PhoneViewController: UIViewController{
     let network = JSONAddPhoneVC()
-    let person = PersonData.sharedData
+    let person = PersonModel.sharedData
     var phone = ""
     var phoneCall = ""
     
@@ -30,7 +30,6 @@ class PhoneViewController: UIViewController{
     
     @IBAction func nextViewController(_ sender: Any) {
         network.postPhoneAuth()
-        sleep(2)
         if person.auth_token == "" {
             infoWindow()
         } else {

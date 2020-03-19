@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		EB2419A9242360B5007438D2 /* FirstEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419A8242360B5007438D2 /* FirstEnterViewController.swift */; };
 		EB2419AB24237C0F007438D2 /* NetworkServiceAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419AA24237C0F007438D2 /* NetworkServiceAccount.swift */; };
-		EB93B27D241F991E0082022E /* PersonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93B27C241F991E0082022E /* PersonData.swift */; };
+		EB2419AD2423A274007438D2 /* BillsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419AC2423A274007438D2 /* BillsModel.swift */; };
+		EB93B27D241F991E0082022E /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93B27C241F991E0082022E /* PersonModel.swift */; };
 		EB93B27F241FE01A0082022E /* NetworkServiceAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */; };
 		EBB3DE8E241CA28F004247F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DE8D241CA28F004247F8 /* AppDelegate.swift */; };
 		EBB3DE90241CA28F004247F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DE8F241CA28F004247F8 /* SceneDelegate.swift */; };
@@ -25,7 +26,8 @@
 /* Begin PBXFileReference section */
 		EB2419A8242360B5007438D2 /* FirstEnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstEnterViewController.swift; sourceTree = "<group>"; };
 		EB2419AA24237C0F007438D2 /* NetworkServiceAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceAccount.swift; sourceTree = "<group>"; };
-		EB93B27C241F991E0082022E /* PersonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonData.swift; sourceTree = "<group>"; };
+		EB2419AC2423A274007438D2 /* BillsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsModel.swift; sourceTree = "<group>"; };
+		EB93B27C241F991E0082022E /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkServiceAuth.swift; path = VladLink/DataModel/NetworkServiceAuth.swift; sourceTree = SOURCE_ROOT; };
 		EBB3DE8A241CA28F004247F8 /* VladLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VladLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB3DE8D241CA28F004247F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +56,8 @@
 		EB93B27B241F99030082022E /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				EB93B27C241F991E0082022E /* PersonData.swift */,
+				EB93B27C241F991E0082022E /* PersonModel.swift */,
+				EB2419AC2423A274007438D2 /* BillsModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -190,8 +193,9 @@
 				EB2419AB24237C0F007438D2 /* NetworkServiceAccount.swift in Sources */,
 				EBB3DE8E241CA28F004247F8 /* AppDelegate.swift in Sources */,
 				EB2419A9242360B5007438D2 /* FirstEnterViewController.swift in Sources */,
+				EB2419AD2423A274007438D2 /* BillsModel.swift in Sources */,
 				EBB3DEAE241E6238004247F8 /* MessageViewController.swift in Sources */,
-				EB93B27D241F991E0082022E /* PersonData.swift in Sources */,
+				EB93B27D241F991E0082022E /* PersonModel.swift in Sources */,
 				EBB3DE90241CA28F004247F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

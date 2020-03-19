@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class MessageViewController: UIViewController{
-    let person = PersonData.sharedData
+    let person = PersonModel.sharedData
     let network = JSONAddPhoneVC()
     var phone = ""
     var code = ""
@@ -23,7 +23,6 @@ class MessageViewController: UIViewController{
     @IBAction func nextViewController(_ sender: Any) {
         code = messageTextField.text!
         network.postMessageAuth(phoneNumber: person.phoneNumber, request_id: person.request_id, code: code)
-        sleep(2)
         if person.auth_token == "" {
             infoWindow()
         } else {

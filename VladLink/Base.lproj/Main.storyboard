@@ -286,7 +286,6 @@
         <!--First Enter View Controller-->
         <scene sceneID="8G2-oY-UQ0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="983-79-QLu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="L8i-Xv-aUJ" customClass="FirstEnterViewController" customModule="VladLink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsd-u4-rOm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -299,23 +298,82 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3t-mE-E6b">
-                                <rect key="frame" x="20" y="116.5" width="374" height="27"/>
+                                <rect key="frame" x="20" y="116.5" width="374" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Данный телефонный номер указан как контактный для следующих лицевых счетов:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNU-kU-a0W">
-                                <rect key="frame" x="5" y="151.5" width="404" height="41"/>
+                                <rect key="frame" x="5" y="151" width="404" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0R1-CQ-lQB">
+                                <rect key="frame" x="20" y="222" width="374" height="216.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelBill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7D-G7-jpp">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aar-6i-HVl">
+                                        <rect key="frame" x="0.0" y="31.5" width="374" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelAdress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQe-XC-XvM">
+                                        <rect key="frame" x="0.0" y="59.5" width="374" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Примичание к лицевому счету" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsW-vo-vMU">
+                                        <rect key="frame" x="0.0" y="87.5" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GO-Cm-PLo">
+                                        <rect key="frame" x="0.0" y="131.5" width="374" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabeExample" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUN-8p-ZTc">
+                                        <rect key="frame" x="0.0" y="157.5" width="374" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qiw-tL-DkU">
+                                        <rect key="frame" x="0.0" y="185.5" width="374" height="31"/>
+                                        <subviews>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="84v-gG-a1Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelAddingBill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAT-Tk-3tt">
+                                                <rect key="frame" x="54" y="0.0" width="320" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="0R1-CQ-lQB" firstAttribute="leading" secondItem="NSv-y6-gvh" secondAttribute="leading" constant="20" id="Cfc-uZ-xSk"/>
                             <constraint firstItem="P3t-mE-E6b" firstAttribute="leading" secondItem="NSv-y6-gvh" secondAttribute="leading" constant="20" id="DLh-XZ-lxD"/>
                             <constraint firstItem="NSv-y6-gvh" firstAttribute="trailing" secondItem="Kfa-Fs-3Rj" secondAttribute="trailing" constant="20" id="HNP-TH-aql"/>
                             <constraint firstItem="Kfa-Fs-3Rj" firstAttribute="leading" secondItem="NSv-y6-gvh" secondAttribute="leading" constant="20" id="IIa-GL-GKa"/>
+                            <constraint firstItem="NSv-y6-gvh" firstAttribute="trailing" secondItem="0R1-CQ-lQB" secondAttribute="trailing" constant="20" id="MJm-Ex-L3E"/>
+                            <constraint firstItem="0R1-CQ-lQB" firstAttribute="top" secondItem="nNU-kU-a0W" secondAttribute="bottom" constant="30" id="YMH-8q-lhe"/>
                             <constraint firstItem="Kfa-Fs-3Rj" firstAttribute="top" secondItem="NSv-y6-gvh" secondAttribute="top" id="d5Z-bd-ivQ"/>
                             <constraint firstItem="NSv-y6-gvh" firstAttribute="trailing" secondItem="nNU-kU-a0W" secondAttribute="trailing" constant="5" id="dy2-zl-Grk"/>
                             <constraint firstItem="nNU-kU-a0W" firstAttribute="top" secondItem="P3t-mE-E6b" secondAttribute="bottom" constant="8" id="ihX-Dg-HPR"/>
@@ -327,11 +385,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="vRF-cI-amt"/>
                     <connections>
+                        <outlet property="billsStackView" destination="0R1-CQ-lQB" id="VCf-Fg-h9V"/>
                         <outlet property="phoneNumberLabel" destination="P3t-mE-E6b" id="02J-Fu-IBX"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="983-79-QLu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3336" y="72"/>
+            <point key="canvasLocation" x="3334.7826086956525" y="71.651785714285708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KXU-qH-gOs">
