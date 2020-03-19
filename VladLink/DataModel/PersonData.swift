@@ -14,8 +14,10 @@ class PersonData{
     var callPhoneNumber = "" //Номер на который звонить
     var auth_token = ""
     var name = ""
-    var uid = 0
+    var uid = ""
     var publicUids = [String]()
+    
+    var formatedPhoneNumber = ""
     
     
     static let sharedData = PersonData()

@@ -19,20 +19,23 @@ class AddPhoneViewController: UIViewController{
     @IBOutlet weak var secondSwitch: UISwitch!
     
     @IBAction func nextViewControllerAction(_ sender: Any) {
+        person.formatedPhoneNumber = phoneTextField.text!
         phoneNumber = deformattedNumber(number: phoneTextField.text!)
         person.phoneNumber = phoneNumber
-        if firstSwitch.isOn {
-            networkService.postPhoneRequest(phoneNumber: phoneNumber)
-            let vc = storyboard?.instantiateViewController(identifier: "callVC") as! PhoneViewController
-            vc.phone = phoneTextField.text!
-            vc.phoneCall = person.callPhoneNumber
-            self.present(vc, animated: true, completion: nil)
-
-        } else {
-            networkService.postMessageRequest(phoneNumber: phoneNumber)
-            let vc = storyboard?.instantiateViewController(identifier: "messageVC") as! MessageViewController
-            vc.phone = phoneTextField.text!
-            self.present(vc, animated: true, completion: nil)
+        if phoneTextField.text == "" {infoWindow()} else{
+            if firstSwitch.isOn {
+                networkService.postPhoneRequest(phoneNumber: phoneNumber)
+                sleep(2)
+                let vc = storyboard?.instantiateViewController(identifier: "callVC") as! PhoneViewController
+                vc.phone = phoneTextField.text!
+                vc.phoneCall = person.callPhoneNumber
+                self.present(vc, animated: true, completion: nil)
+            } else {
+                networkService.postMessageRequest(phoneNumber: phoneNumber)
+                let vc = storyboard?.instantiateViewController(identifier: "messageVC") as! MessageViewController
+                vc.phone = phoneTextField.text!
+                self.present(vc, animated: true, completion: nil)
+            }
         }
     }
     
@@ -77,6 +80,23 @@ class AddPhoneViewController: UIViewController{
         result = result.replacingOccurrences(of: ")", with: "")
         result = result.replacingOccurrences(of: "-", with: "")
         return result
+    }
+    
+    let titleWindow = "Упс!"
+    let messageWindow = "Что-то случилось, попробуйте еще"
+    
+    private func infoWindow(){
+        let alertController = UIAlertController(
+            title: titleWindow,
+            message: messageWindow,
+            preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(
+            title: "Закрыть",
+            style: .default,
+            handler: { _ in
+                alertController.dismiss(animated: true, completion: nil)
+        }))
+        present(alertController, animated: true, completion: nil)
     }
 }
 

@@ -29,7 +29,14 @@ class PhoneViewController: UIViewController{
     }
     
     @IBAction func nextViewController(_ sender: Any) {
-      //  network.postPhoneAuth(phoneNumber: person.phoneNumber, request_id: person.request_id)
+        network.postPhoneAuth()
+        sleep(2)
+        if person.auth_token == "" {
+            infoWindow()
+        } else {
+            let vc = storyboard?.instantiateViewController(identifier: "firstEnterVC") as! UINavigationController
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     
@@ -42,5 +49,22 @@ class PhoneViewController: UIViewController{
         phoneLabel.text = "В течении 2-х минут позвоните с номера  \n\(phone)\nна бесплатный номер."
         infoLabel.text = "После набора соединение автоматически сбросится (звонок будет бесплатным для вас)."
         phoneButton.setTitle(phoneCall, for: .normal)
+    }
+    
+    let titleWindow = "Упс!"
+    let messageWindow = "Что-то случилось, попробуйте еще"
+    
+    private func infoWindow(){
+        let alertController = UIAlertController(
+            title: titleWindow,
+            message: messageWindow,
+            preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(
+            title: "Закрыть",
+            style: .default,
+            handler: { _ in
+                alertController.dismiss(animated: true, completion: nil)
+        }))
+        present(alertController, animated: true, completion: nil)
     }
 }

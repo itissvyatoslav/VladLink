@@ -12,19 +12,14 @@ class JSONAddPhoneVC{
     let person = PersonData.sharedData
     
     struct postMessageDataRequest: Codable {
-        var data:  DataStruct?
+        var data:  DataStructRequest?
         var status: Int
     }
     
-    struct DataStruct: Codable {
+    struct DataStructRequest: Codable {
         var phone: String?
         var requestid: String?
         var code: String?
-        var auth_token: String?
-        var name: String?
-        var uid: Int?
-        var public_uids = [String?]()
-        
         enum CodingKeys: String, CodingKey{
             case phone
             case requestid = "request_id"
@@ -32,95 +27,115 @@ class JSONAddPhoneVC{
         }
     }
     
+    struct postMessageDataAuth: Codable {
+        var data: DataStructAuth?
+        var status: Int
+    }
+    
+    struct DataStructAuth: Codable {
+        var phone: String?
+        var requestid: String?
+        var code: String?
+        var auth_token: String?
+        var name: String?
+        var uid: String?
+        var public_uids = [String?]()
+        
+        enum CodingKeys: String, CodingKey{
+            case phone
+            case requestid = "request_id"
+            case code
+            case auth_token
+            case name
+            case uid
+            case public_uids
+            
+        }
+    }
+    
     func postPhoneRequest(phoneNumber: String){
-        let queue = DispatchQueue.global()
+        
         let parametr = ["phone": "\(phoneNumber)"]
         let parametrs = ["data": parametr]
         guard let url = URL(string: "https://test-api.vladlink.ru/v1/auth/subscribers/authByCall/request") else {
             print("error url")
             return
         }
-        queue.sync {
-            var request = URLRequest(url: url)
-            request.httpMethod = "POST"
-            request.addValue("application/json", forHTTPHeaderField: "Accept")
-            guard let httpBody = try? JSONSerialization.data(withJSONObject: parametrs, options: []) else {
-                print("JSONSerialization error")
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: parametrs, options: []) else {
+            print("JSONSerialization error")
+            return
+        }
+        request.httpBody = httpBody
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let response = response{
+                print(response)
+            }
+            guard let data = data else {
+                print("data error")
                 return
             }
-            request.httpBody = httpBody
-            
-            queue.sync {
-                
-                let session = URLSession.shared
-                session.dataTask(with: request) { (data, response, error) in
-                    if let response = response{
-                        print(response)
+                do {
+                    
+                    let json = try JSONDecoder().decode(postMessageDataRequest.self, from: data)
+                    if json.status == 200 {
+                        self.person.request_id = json.data!.requestid!
+                        self.person.callPhoneNumber = json.data!.phone!
+                    } else {
+                        print("status != 200")
                     }
-                    guard let data = data else {
-                        print("data error")
-                        return
-                    }
-                    do {
-                        
-                        let json = try JSONDecoder().decode(postMessageDataRequest.self, from: data)
-                        if json.status == 200 {
-                            self.person.request_id = json.data!.requestid!
-                            self.person.callPhoneNumber = json.data!.phone!
-                        } else {
-                            print("status != 200")
-                        }
-                    } catch {
-                        print(error)
-                    }
-                }.resume()
-            }
-        }
+                } catch {
+                    print(error)
+                }
+        }.resume()
+        return
     }
     
     func postPhoneAuth(){
         let queue = DispatchQueue.global()
-        let parametr = ["phone": "\(person.phoneNumber)"]
+        let parametr = ["phone": "\(person.phoneNumber)", "request_id": "\(person.request_id)"]
         let parametrs = ["data": parametr]
         guard let url = URL(string: "https://test-api.vladlink.ru/v1/auth/subscribers/authByCall/request") else {
             print("error url")
             return
         }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: parametrs, options: []) else {
+            print("JSONSerialization error")
+            return
+        }
+        request.httpBody = httpBody
+        
         queue.sync {
-            var request = URLRequest(url: url)
-            request.httpMethod = "POST"
-            request.addValue("application/json", forHTTPHeaderField: "Accept")
-            guard let httpBody = try? JSONSerialization.data(withJSONObject: parametrs, options: []) else {
-                print("JSONSerialization error")
-                return
-            }
-            request.httpBody = httpBody
-            
-            queue.sync {
-                
-                let session = URLSession.shared
-                session.dataTask(with: request) { (data, response, error) in
-                    if let response = response{
-                        print(response)
+            let session = URLSession.shared
+            session.dataTask(with: request) { (data, response, error) in
+                if let response = response{
+                    print(response)
+                }
+                guard let data = data else {
+                    print("data error")
+                    return
+                }
+                do {
+                    let json = try JSONDecoder().decode(postMessageDataAuth.self, from: data)
+                    if json.status == 200 {
+                        self.person.auth_token = (json.data?.auth_token)!
+                        self.person.uid = (json.data?.uid)!
+                        self.person.name = (json.data?.name)!
+                        self.person.publicUids = (json.data!.public_uids) as! [String]
+                    } else {
+                        print("status != 200")
                     }
-                    guard let data = data else {
-                        print("data error")
-                        return
-                    }
-                    do {
-                        
-                        let json = try JSONDecoder().decode(postMessageDataRequest.self, from: data)
-                        if json.status == 200 {
-                            self.person.request_id = json.data!.requestid!
-                            self.person.callPhoneNumber = json.data!.phone!
-                        } else {
-                            print("status != 200")
-                        }
-                    } catch {
-                        print(error)
-                    }
-                }.resume()
-            }
+                } catch {
+                    print(error)
+                }
+            }.resume()
         }
     }
     
@@ -197,15 +212,15 @@ class JSONAddPhoneVC{
                 return
             }
             do {
-                let json = try JSONDecoder().decode(postMessageDataRequest.self, from: data)
-                //let json = try JSONSerialization.jsonObject(with: data, options: [])
-                // if json.status == 200 {
-                //    self.person.auth_token = (json.data?.auth_token)!
-                //    self.person.uid = (json.data?.uid)!
-                //    self.person.name = (json.data?.name)!
-                //    self.person.publicUids = (json.data!.public_uids) as! [String]
-                // }
-                print("!!!!! ---- \(json)")
+                let json = try JSONDecoder().decode(postMessageDataAuth.self, from: data)
+                //let json = try JSONSerialization.jsonObject(with: data, options: []) as! postMessageDataAuth
+                 if json.status == 200 {
+                    self.person.auth_token = (json.data?.auth_token)!
+                    self.person.uid = (json.data?.uid)!
+                    self.person.name = (json.data?.name)!
+                    self.person.publicUids = (json.data!.public_uids) as! [String]
+                 }
+                //print("!!!!! ---- \(json)")
                 
             } catch {
                 print(error)

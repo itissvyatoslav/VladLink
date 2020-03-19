@@ -22,8 +22,14 @@ class MessageViewController: UIViewController{
     }
     @IBAction func nextViewController(_ sender: Any) {
         code = messageTextField.text!
-        print("!!!!!!! CODE \(code) REQUEST ID \(person.request_id) PHONE NUMBER \(person.phoneNumber)")
         network.postMessageAuth(phoneNumber: person.phoneNumber, request_id: person.request_id, code: code)
+        sleep(2)
+        if person.auth_token == "" {
+            infoWindow()
+        } else {
+            let vc = storyboard?.instantiateViewController(identifier: "firstEnterVC") as! UINavigationController
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,5 +38,22 @@ class MessageViewController: UIViewController{
     
     private func setLabel(){
         messageLabel.text = "Введите код из сообщения, отправленного на номер \n\(phone)"
+    }
+    
+    let titleWindow = "Упс!"
+    let messageWindow = "Что-то случилось, попробуйте еще"
+    
+    private func infoWindow(){
+        let alertController = UIAlertController(
+            title: titleWindow,
+            message: messageWindow,
+            preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(
+            title: "Закрыть",
+            style: .default,
+            handler: { _ in
+                alertController.dismiss(animated: true, completion: nil)
+        }))
+        present(alertController, animated: true, completion: nil)
     }
 }
