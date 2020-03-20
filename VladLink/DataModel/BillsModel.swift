@@ -10,6 +10,7 @@ import Foundation
 
 class BillModel{
     var bills = [bill]()
+    var addedBill = bill(balls: "", bill: "", block: false, city_id: "", email: nil, full_name: "", id: "", is_juridical: false, is_sms: [""], skidko: "", tariff: "", tariff_current: BillModel.tariffCurrent(abonpay: "", tid: "", tname: ""), tariff_next: "", u_address: [BillModel.uAddress(descr: "", did: "", dom_name: "", floor: "", porch: "")], ulogin: "")
     
     var jsonRequest =  requestBill()
     

@@ -10,7 +10,7 @@ import Foundation
 
 class JSONService{
     let person = PersonModel.sharedData
-    let bill = BillModel.sharedData
+    let billLoaded = BillModel.sharedData
     
     //MARK: - STRUCT
     struct requestBill: Codable {
@@ -33,7 +33,7 @@ class JSONService{
         var tariff: String
         var tariff_current: tariffCurrent
         var tariff_next: String
-        var u_address :[uAddress]
+        var u_address: [uAddress]
         var ulogin: String
     }
     
@@ -120,9 +120,32 @@ class JSONService{
             }
             do {
                 let json = try JSONDecoder().decode(requestBill.self, from: data)
+                print((json.data[0]?.balls)!)
                 //let json = try JSONSerialization.jsonObject(with: data, options: [])
-                self.bill.bills = json.data
-                print(json.data)
+                self.billLoaded.addedBill.balls = (json.data[0]?.balls)!
+               // print("!!!!!!!!\(self.billLoaded.addedBill?.balls)")
+                self.billLoaded.addedBill.bill = (json.data[0]?.bill)!
+                //print("!!!!!!!!\((json.data[0]?.bill)!)")
+                self.billLoaded.addedBill.block = (json.data[0]?.block)!
+                self.billLoaded.addedBill.city_id = (json.data[0]?.city_id)!
+                self.billLoaded.addedBill.email = (json.data[0]?.email)
+                self.billLoaded.addedBill.full_name = (json.data[0]?.full_name)!
+                self.billLoaded.addedBill.id = (json.data[0]?.id)!
+                self.billLoaded.addedBill.is_juridical = (json.data[0]?.is_juridical)!
+                self.billLoaded.addedBill.is_sms = json.data[0]!.is_sms
+                self.billLoaded.addedBill.skidko = json.data[0]!.skidko
+                self.billLoaded.addedBill.tariff = json.data[0]!.tariff
+                self.billLoaded.addedBill.tariff_current.abonpay = json.data[0]!.tariff_current.abonpay
+                self.billLoaded.addedBill.tariff_current.tid = json.data[0]!.tariff_current.tid
+                self.billLoaded.addedBill.tariff_current.tname = json.data[0]!.tariff_current.tname
+                self.billLoaded.addedBill.u_address[0].descr = json.data[0]!.u_address[0].descr
+                self.billLoaded.addedBill.u_address[0].did = json.data[0]!.u_address[0].did
+                self.billLoaded.addedBill.u_address[0].dom_name = json.data[0]!.u_address[0].dom_name
+                self.billLoaded.addedBill.u_address[0].floor = json.data[0]!.u_address[0].floor
+                self.billLoaded.addedBill.u_address[0].porch = json.data[0]!.u_address[0].porch
+                self.billLoaded.addedBill.ulogin = json.data[0]!.ulogin
+                self.billLoaded.bills.append(self.billLoaded.addedBill)
+                //print(json.data)
             } catch {
                 print(error)
             }
