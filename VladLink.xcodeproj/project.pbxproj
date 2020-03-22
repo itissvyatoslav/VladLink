@@ -10,9 +10,15 @@
 		EB2419A9242360B5007438D2 /* FirstEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419A8242360B5007438D2 /* FirstEnterViewController.swift */; };
 		EB2419AB24237C0F007438D2 /* NetworkServiceAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419AA24237C0F007438D2 /* NetworkServiceAccount.swift */; };
 		EB2419AD2423A274007438D2 /* BillsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419AC2423A274007438D2 /* BillsModel.swift */; };
-		EB2419B02424AEA9007438D2 /* EditCellBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419AF2424AEA9007438D2 /* EditCellBillView.swift */; };
+		EB2419DA2424F003007438D2 /* BillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419D82424F003007438D2 /* BillCell.swift */; };
+		EB2419DB2424F003007438D2 /* BillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB2419D92424F003007438D2 /* BillCell.xib */; };
+		EB2419E32426197C007438D2 /* ButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419E12426197C007438D2 /* ButtonsCell.swift */; };
+		EB2419E42426197C007438D2 /* ButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB2419E22426197C007438D2 /* ButtonsCell.xib */; };
+		EB2419E724261D4B007438D2 /* LabelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419E524261D4B007438D2 /* LabelsCell.swift */; };
+		EB2419E824261D4B007438D2 /* LabelsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB2419E624261D4B007438D2 /* LabelsCell.xib */; };
 		EB93B27D241F991E0082022E /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93B27C241F991E0082022E /* PersonModel.swift */; };
 		EB93B27F241FE01A0082022E /* NetworkServiceAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */; };
+		EBA7FFD82427BF6200DAACF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */; };
 		EBB3DE8E241CA28F004247F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DE8D241CA28F004247F8 /* AppDelegate.swift */; };
 		EBB3DE90241CA28F004247F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DE8F241CA28F004247F8 /* SceneDelegate.swift */; };
 		EBB3DE92241CA28F004247F8 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DE91241CA28F004247F8 /* GreetingViewController.swift */; };
@@ -28,9 +34,15 @@
 		EB2419A8242360B5007438D2 /* FirstEnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstEnterViewController.swift; sourceTree = "<group>"; };
 		EB2419AA24237C0F007438D2 /* NetworkServiceAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceAccount.swift; sourceTree = "<group>"; };
 		EB2419AC2423A274007438D2 /* BillsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsModel.swift; sourceTree = "<group>"; };
-		EB2419AF2424AEA9007438D2 /* EditCellBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCellBillView.swift; sourceTree = "<group>"; };
+		EB2419D82424F003007438D2 /* BillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BillCell.swift; path = BillCell/BillCell.swift; sourceTree = "<group>"; };
+		EB2419D92424F003007438D2 /* BillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BillCell.xib; path = BillCell/BillCell.xib; sourceTree = "<group>"; };
+		EB2419E12426197C007438D2 /* ButtonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ButtonsCell.swift; path = ButtonsCell/ButtonsCell.swift; sourceTree = "<group>"; };
+		EB2419E22426197C007438D2 /* ButtonsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ButtonsCell.xib; path = ButtonsCell/ButtonsCell.xib; sourceTree = "<group>"; };
+		EB2419E524261D4B007438D2 /* LabelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelsCell.swift; path = LabelsCell/LabelsCell.swift; sourceTree = "<group>"; };
+		EB2419E624261D4B007438D2 /* LabelsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LabelsCell.xib; path = LabelsCell/LabelsCell.xib; sourceTree = "<group>"; };
 		EB93B27C241F991E0082022E /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkServiceAuth.swift; path = VladLink/DataModel/NetworkServiceAuth.swift; sourceTree = SOURCE_ROOT; };
+		EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EBB3DE8A241CA28F004247F8 /* VladLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VladLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB3DE8D241CA28F004247F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB3DE8F241CA28F004247F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +70,12 @@
 		EB2419AE2424AE31007438D2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EB2419AF2424AEA9007438D2 /* EditCellBillView.swift */,
+				EB2419D82424F003007438D2 /* BillCell.swift */,
+				EB2419D92424F003007438D2 /* BillCell.xib */,
+				EB2419E12426197C007438D2 /* ButtonsCell.swift */,
+				EB2419E22426197C007438D2 /* ButtonsCell.xib */,
+				EB2419E524261D4B007438D2 /* LabelsCell.swift */,
+				EB2419E624261D4B007438D2 /* LabelsCell.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -93,9 +110,9 @@
 			children = (
 				EBB3DE93241CA28F004247F8 /* Main.storyboard */,
 				EBB3DEA1241CA2BE004247F8 /* Views */,
+				EB2419AE2424AE31007438D2 /* ViewController */,
 				EBB3DEA6241CBCC0004247F8 /* Service */,
 				EB93B27B241F99030082022E /* DataModel */,
-				EB2419AE2424AE31007438D2 /* ViewController */,
 				EBB3DE8F241CA28F004247F8 /* SceneDelegate.swift */,
 				EBB3DE8D241CA28F004247F8 /* AppDelegate.swift */,
 				EBB3DE96241CA295004247F8 /* Assets.xcassets */,
@@ -113,6 +130,7 @@
 				EBB3DEAB241E6227004247F8 /* PhoneViewController.swift */,
 				EBB3DEAD241E6238004247F8 /* MessageViewController.swift */,
 				EB2419A8242360B5007438D2 /* FirstEnterViewController.swift */,
+				EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,9 +202,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB2419DB2424F003007438D2 /* BillCell.xib in Resources */,
 				EBB3DE9A241CA295004247F8 /* LaunchScreen.storyboard in Resources */,
 				EBB3DE97241CA295004247F8 /* Assets.xcassets in Resources */,
+				EB2419E42426197C007438D2 /* ButtonsCell.xib in Resources */,
 				EBB3DE95241CA28F004247F8 /* Main.storyboard in Resources */,
+				EB2419E824261D4B007438D2 /* LabelsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,13 +218,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB2419DA2424F003007438D2 /* BillCell.swift in Sources */,
 				EB93B27F241FE01A0082022E /* NetworkServiceAuth.swift in Sources */,
-				EB2419B02424AEA9007438D2 /* EditCellBillView.swift in Sources */,
 				EBB3DE92241CA28F004247F8 /* GreetingViewController.swift in Sources */,
 				EBB3DEAC241E6227004247F8 /* PhoneViewController.swift in Sources */,
+				EB2419E32426197C007438D2 /* ButtonsCell.swift in Sources */,
 				EBB3DEA8241CE3B3004247F8 /* AddPhoneViewController.swift in Sources */,
+				EB2419E724261D4B007438D2 /* LabelsCell.swift in Sources */,
 				EB2419AB24237C0F007438D2 /* NetworkServiceAccount.swift in Sources */,
 				EBB3DE8E241CA28F004247F8 /* AppDelegate.swift in Sources */,
+				EBA7FFD82427BF6200DAACF6 /* MainViewController.swift in Sources */,
 				EB2419A9242360B5007438D2 /* FirstEnterViewController.swift in Sources */,
 				EB2419AD2423A274007438D2 /* BillsModel.swift in Sources */,
 				EBB3DEAE241E6238004247F8 /* MessageViewController.swift in Sources */,

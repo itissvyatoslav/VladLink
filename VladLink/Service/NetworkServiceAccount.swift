@@ -120,12 +120,8 @@ class JSONService{
             }
             do {
                 let json = try JSONDecoder().decode(requestBill.self, from: data)
-                print((json.data[0]?.balls)!)
-                //let json = try JSONSerialization.jsonObject(with: data, options: [])
                 self.billLoaded.addedBill.balls = (json.data[0]?.balls)!
-               // print("!!!!!!!!\(self.billLoaded.addedBill?.balls)")
                 self.billLoaded.addedBill.bill = (json.data[0]?.bill)!
-                //print("!!!!!!!!\((json.data[0]?.bill)!)")
                 self.billLoaded.addedBill.block = (json.data[0]?.block)!
                 self.billLoaded.addedBill.city_id = (json.data[0]?.city_id)!
                 self.billLoaded.addedBill.email = (json.data[0]?.email)
@@ -145,11 +141,9 @@ class JSONService{
                 self.billLoaded.addedBill.u_address[0].porch = json.data[0]!.u_address[0].porch
                 self.billLoaded.addedBill.ulogin = json.data[0]!.ulogin
                 self.billLoaded.bills.append(self.billLoaded.addedBill)
-                //print(json.data)
             } catch {
                 print(error)
             }
-            //print(String(data: data, encoding: .utf8)!)
             semaphore.signal()
         }
         
