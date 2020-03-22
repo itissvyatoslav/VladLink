@@ -8,18 +8,23 @@
 import Foundation
 import UIKit
 
-class ButtonsCell: UICollectionViewCell {
+protocol ButtonsCellDelegate {
+    func nextViewController()
+    func previousViewController()
+}
 
+class ButtonsCell: UICollectionViewCell {
+    var delegate: ButtonsCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     @IBAction func nextViewController(_ sender: Any) {
-        let vc = MainViewController()
-        vc.present(vc, animated: true, completion: nil)
+        delegate?.nextViewController()
     }
     
     @IBAction func previousViewController(_ sender: Any) {
+        delegate?.previousViewController()
     }
 }
 

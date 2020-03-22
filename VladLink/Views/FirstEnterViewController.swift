@@ -19,7 +19,7 @@ class FirstEnterViewController: UIViewController {
     override func viewDidLoad() {
         network.getBills(auth_token: person.auth_token)
         super.viewDidLoad()
-        print(bill.bills[0])
+//        print(bill.bills[0])
         setView()
         
     }
@@ -31,6 +31,19 @@ class FirstEnterViewController: UIViewController {
         self.billList.delegate = self
         self.billList.dataSource = self
     }
+}
+
+extension FirstEnterViewController: ButtonsCellDelegate{
+    func nextViewController() {
+        let vc = storyboard?.instantiateViewController(identifier: "mainVC") as! MainViewController
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func previousViewController() {
+        self.dismiss(animated: true)
+    }
+    
+    
 }
 
 extension FirstEnterViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
@@ -45,6 +58,7 @@ extension FirstEnterViewController: UICollectionViewDelegate, UICollectionViewDa
             return cell
         } else if indexPath.item == bill.bills.count + 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ButtonsCell", for: indexPath) as! ButtonsCell
+            cell.delegate = self
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BillCell", for: indexPath) as! BillCell

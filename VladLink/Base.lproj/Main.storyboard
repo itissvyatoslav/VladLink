@@ -336,20 +336,59 @@
             </objects>
             <point key="canvasLocation" x="3334.7826086956525" y="71.651785714285708"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Ieh-EG-zL1">
+        <!--Main View Controller-->
+        <scene sceneID="HyC-CV-vAE">
             <objects>
-                <viewController storyboardIdentifier="mainVC" id="ZKc-bN-UIF" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pVi-8t-w7I">
+                <viewController storyboardIdentifier="mainVC" id="vF1-uI-Ss8" customClass="MainViewController" customModule="VladLink" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ksq-jw-Ckh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MCd-XM-dfb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qJY-aH-Q6s">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fYt-fJ-NAX">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lO2-t3-076">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZu-3p-o2P">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.091278024020000001" green="0.4943004251" blue="0.75826513770000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="JEb-q9-Sde"/>
+                        <constraints>
+                            <constraint firstItem="dZu-3p-o2P" firstAttribute="trailing" secondItem="ge5-RB-f8C" secondAttribute="trailing" id="4so-M5-HDA"/>
+                            <constraint firstItem="dZu-3p-o2P" firstAttribute="leading" secondItem="ge5-RB-f8C" secondAttribute="leading" id="89y-PI-GVd"/>
+                            <constraint firstItem="ge5-RB-f8C" firstAttribute="bottom" secondItem="MCd-XM-dfb" secondAttribute="bottom" id="QoW-K0-g79"/>
+                            <constraint firstItem="MCd-XM-dfb" firstAttribute="leading" secondItem="ge5-RB-f8C" secondAttribute="leading" id="TYR-VD-VRK"/>
+                            <constraint firstItem="MCd-XM-dfb" firstAttribute="top" secondItem="dZu-3p-o2P" secondAttribute="bottom" symbolic="YES" id="YBK-Jj-Lcp"/>
+                            <constraint firstItem="ge5-RB-f8C" firstAttribute="trailing" secondItem="MCd-XM-dfb" secondAttribute="trailing" id="iCw-qo-lOl"/>
+                            <constraint firstItem="dZu-3p-o2P" firstAttribute="top" secondItem="ge5-RB-f8C" secondAttribute="top" id="oyz-xh-XSH"/>
+                            <constraint firstItem="MCd-XM-dfb" firstAttribute="top" secondItem="dZu-3p-o2P" secondAttribute="bottom" symbolic="YES" id="sWE-zE-fVb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ge5-RB-f8C"/>
                     </view>
+                    <connections>
+                        <outlet property="billList" destination="MCd-XM-dfb" id="NAS-GL-rvH"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PTz-9u-KM7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8M-hw-4Zg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4159" y="84"/>
+            <point key="canvasLocation" x="4111.594202898551" y="76.339285714285708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KXU-qH-gOs">
