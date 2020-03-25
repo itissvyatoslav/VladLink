@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dmD-mS-zhV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -8,6 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="7ca-Xa-Oj3">
+            <objects>
+                <navigationController id="dmD-mS-zhV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gzI-bg-O09">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="N8F-cn-n1R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6B-ik-2Mq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-613" y="116"/>
+        </scene>
         <!--Greeting View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,16 +33,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="HzD-MD-yRH">
-                                <rect key="frame" x="80" y="84" width="254" height="149"/>
+                                <rect key="frame" x="80" y="128" width="254" height="149"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пожалуйста, выберите ваш статус" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8e-L5-Kqu">
-                                <rect key="frame" x="40" y="313.5" width="334" height="20.5"/>
+                                <rect key="frame" x="40" y="357.5" width="334" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaQ-s9-bjo">
-                                <rect key="frame" x="40" y="354" width="334" height="30"/>
+                                <rect key="frame" x="40" y="398" width="334" height="30"/>
                                 <color key="backgroundColor" red="0.091278024020000001" green="0.4943004251" blue="0.75826513770000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.10000000000000001" y="0.0" width="1" height="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -38,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAF-Vz-wLD">
-                                <rect key="frame" x="40" y="394" width="334" height="30"/>
+                                <rect key="frame" x="40" y="438" width="334" height="30"/>
                                 <color key="backgroundColor" red="0.91469603779999997" green="0.31367999320000001" blue="0.11237018560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Я ЕЩЕ НЕ АБОНЕНТ ВЛАДЛИНК">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,7 +64,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать в приложение Владлинк!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ml2-HH-EzD">
-                                <rect key="frame" x="40" y="241" width="334" height="57.5"/>
+                                <rect key="frame" x="40" y="285" width="334" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -92,6 +108,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jxv-JC-8vh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -102,11 +119,11 @@
             <objects>
                 <viewController storyboardIdentifier="addPhoneVC" id="PtE-BD-HGB" customClass="AddPhoneViewController" customModule="VladLink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lKh-LU-zpr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите ваш номер телефона" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsA-SC-Ux6">
-                                <rect key="frame" x="20" y="20" width="374" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите ваш номер телефона" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsA-SC-Ux6">
+                                <rect key="frame" x="20" y="108" width="374" height="29"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -114,18 +131,18 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F6B-Ul-Cn0">
-                                <rect key="frame" x="20" y="64" width="374" height="34"/>
+                                <rect key="frame" x="20" y="152" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="address-line2"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Способ подтверждения" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4j4-vC-rTJ">
-                                <rect key="frame" x="20" y="138" width="374" height="24"/>
+                                <rect key="frame" x="20" y="226" width="374" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ma-Mf-GAQ">
-                                <rect key="frame" x="100" y="269" width="214" height="30"/>
+                                <rect key="frame" x="100" y="357" width="214" height="30"/>
                                 <color key="backgroundColor" red="0.091492913659999994" green="0.4942803979" blue="0.76631790399999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="ДАЛЕЕ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -135,7 +152,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6t-KN-6vv">
-                                <rect key="frame" x="100" y="309" width="214" height="30"/>
+                                <rect key="frame" x="100" y="397" width="214" height="30"/>
                                 <color key="backgroundColor" red="0.91469603779999997" green="0.31367999320000001" blue="0.11237018560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="НАЗАД">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -146,25 +163,25 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Звонок на бесплатный номер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXp-uy-L5l">
-                                <rect key="frame" x="20" y="182" width="251" height="22"/>
+                                <rect key="frame" x="20" y="270" width="251" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подтверждение по СМС" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azK-En-LNr">
-                                <rect key="frame" x="20" y="217" width="208" height="22"/>
+                                <rect key="frame" x="20" y="305" width="208" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bd7-ok-bzm">
-                                <rect key="frame" x="345" y="177.5" width="51" height="31"/>
+                                <rect key="frame" x="345" y="265.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="switch1Action:" destination="PtE-BD-HGB" eventType="valueChanged" id="nmr-qP-sQ2"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Z9r-Y3-pmi" userLabel="Second Switch">
-                                <rect key="frame" x="345" y="212.5" width="51" height="31"/>
+                                <rect key="frame" x="345" y="300.5" width="51" height="31"/>
                                 <connections>
                                     <action selector="switch2Action:" destination="PtE-BD-HGB" eventType="valueChanged" id="Fzl-wG-dq8"/>
                                 </connections>
@@ -202,9 +219,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TR5-Al-rdj"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TSn-96-yuE"/>
                     <connections>
                         <outlet property="firstSwitch" destination="bd7-ok-bzm" id="5bB-f8-xtc"/>
+                        <outlet property="infoLabel" destination="BsA-SC-Ux6" id="ykv-yz-Kjp"/>
                         <outlet property="phoneTextField" destination="F6B-Ul-Cn0" id="a7K-Oo-0cZ"/>
                         <outlet property="secondSwitch" destination="Z9r-Y3-pmi" id="TFB-Gv-YQb"/>
                     </connections>
@@ -294,7 +311,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6JO-Em-iN1">
                                 <rect key="frame" x="3" y="88" width="408" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dly-hP-VE1">
                                     <size key="itemSize" width="374" height="226"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -305,20 +322,15 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6FV-F2-QCF">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sI-Ed-xLZ">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sI-Ed-xLZ">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </collectionViewCellContentView>
-                                        <constraints>
-                                            <constraint firstItem="4sI-Ed-xLZ" firstAttribute="top" secondItem="6FV-F2-QCF" secondAttribute="topMargin" constant="-8" id="2iW-3B-KG7"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="4sI-Ed-xLZ" secondAttribute="trailing" constant="-8" id="D65-wZ-329"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="4sI-Ed-xLZ" secondAttribute="bottom" constant="-8" id="bwu-iG-n9H"/>
-                                            <constraint firstItem="4sI-Ed-xLZ" firstAttribute="leading" secondItem="6FV-F2-QCF" secondAttribute="leadingMargin" constant="-8" id="wIk-KD-u7y"/>
-                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.92932325599999999" green="0.92947560549999997" blue="0.92929089070000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6JO-Em-iN1" firstAttribute="leading" secondItem="NSv-y6-gvh" secondAttribute="leading" constant="3" id="5Gj-1B-TSR"/>
                             <constraint firstItem="NSv-y6-gvh" firstAttribute="trailing" secondItem="6JO-Em-iN1" secondAttribute="trailing" constant="3" id="Mjr-lN-3CJ"/>
@@ -347,17 +359,17 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MCd-XM-dfb">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qJY-aH-Q6s">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="731-FW-ixZ">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fYt-fJ-NAX">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bXm-zX-BJ2">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lO2-t3-076">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="D2m-Mx-6Zq">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
@@ -382,8 +394,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ge5-RB-f8C"/>
                     </view>
+                    <navigationItem key="navigationItem" id="78f-Uw-PXo"/>
                     <connections>
                         <outlet property="billList" destination="MCd-XM-dfb" id="NAS-GL-rvH"/>
+                        <outlet property="navBar" destination="dZu-3p-o2P" id="TLA-ai-Hdh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z8M-hw-4Zg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

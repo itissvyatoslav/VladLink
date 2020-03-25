@@ -19,7 +19,7 @@ class FirstEnterViewController: UIViewController {
     override func viewDidLoad() {
         network.getBills(auth_token: person.auth_token)
         super.viewDidLoad()
-//        print(bill.bills[0])
+        print(bill.bills[0])
         setView()
         
     }
@@ -36,6 +36,7 @@ class FirstEnterViewController: UIViewController {
 extension FirstEnterViewController: ButtonsCellDelegate{
     func nextViewController() {
         let vc = storyboard?.instantiateViewController(identifier: "mainVC") as! MainViewController
+        //self.navigationController?.pushViewController(vc, animated: true)
         self.present(vc, animated: true, completion: nil)
     }
     

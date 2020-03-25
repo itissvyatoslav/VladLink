@@ -11,29 +11,51 @@ import UIKit
 
 class AddPhoneViewController: UIViewController{
     let person = PersonModel.sharedData
-    let networkService = JSONAddPhoneVC()
+    let networkServiceFirstEnter = JSONAddPhoneVC()
+    let networkServiceEdit = ChangePhoneNumber()
     var phoneNumber = ""
     
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var firstSwitch: UISwitch!
     @IBOutlet weak var secondSwitch: UISwitch!
+    @IBOutlet weak var infoLabel: UILabel!
     
     @IBAction func nextViewControllerAction(_ sender: Any) {
-        person.formatedPhoneNumber = phoneTextField.text!
-        phoneNumber = deformattedNumber(number: phoneTextField.text!)
-        person.phoneNumber = phoneNumber
-        if phoneTextField.text == "" {infoWindow()} else{
-            if firstSwitch.isOn {
-                networkService.postPhoneRequest(phoneNumber: phoneNumber)
-                let vc = storyboard?.instantiateViewController(identifier: "callVC") as! PhoneViewController
-                vc.phone = phoneTextField.text!
-                vc.phoneCall = person.callPhoneNumber
-                self.present(vc, animated: true, completion: nil)
-            } else {
-                networkService.postMessageRequest(phoneNumber: phoneNumber)
-                let vc = storyboard?.instantiateViewController(identifier: "messageVC") as! MessageViewController
-                vc.phone = phoneTextField.text!
-                self.present(vc, animated: true, completion: nil)
+        if person.phoneNumber == ""{ // new phone
+            person.formatedPhoneNumber = phoneTextField.text!
+            phoneNumber = deformattedNumber(number: phoneTextField.text!)
+            person.maybePhoneNumber = phoneNumber
+            if phoneTextField.text == "" {infoWindow()} else{
+                if firstSwitch.isOn {
+                    networkServiceFirstEnter.postPhoneRequest(phoneNumber: phoneNumber)
+                    let vc = storyboard?.instantiateViewController(identifier: "callVC") as! PhoneViewController
+                    vc.phone = phoneTextField.text!
+                    vc.phoneCall = person.callPhoneNumber
+                    self.present(vc, animated: true, completion: nil)
+                } else {
+                    networkServiceFirstEnter.postMessageRequest(phoneNumber: phoneNumber)
+                    let vc = storyboard?.instantiateViewController(identifier: "messageVC") as! MessageViewController
+                    vc.phone = phoneTextField.text!
+                    self.present(vc, animated: true, completion: nil)
+                }
+            }
+        } else { // change phone
+            person.formatedPhoneNumber = phoneTextField.text!
+            phoneNumber = deformattedNumber(number: phoneTextField.text!)
+            person.phoneNumber = phoneNumber
+            if phoneTextField.text == "" {infoWindow()} else{
+                if firstSwitch.isOn {
+                    networkServiceFirstEnter.postPhoneRequest(phoneNumber: phoneNumber)
+                    let vc = storyboard?.instantiateViewController(identifier: "callVC") as! PhoneViewController
+                    vc.phone = phoneTextField.text!
+                    vc.phoneCall = person.callPhoneNumber
+                    self.present(vc, animated: true, completion: nil)
+                } else {
+                    networkServiceEdit.postMessageRequest(phoneNumber: phoneNumber)
+                    let vc = storyboard?.instantiateViewController(identifier: "messageVC") as! MessageViewController
+                    vc.phone = phoneTextField.text!
+                    self.present(vc, animated: true, completion: nil)
+                }
             }
         }
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB03505F242A230600BADCE1 /* NetworkServiceChangePhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03505E242A230600BADCE1 /* NetworkServiceChangePhone.swift */; };
 		EB2419A9242360B5007438D2 /* FirstEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419A8242360B5007438D2 /* FirstEnterViewController.swift */; };
 		EB2419AB24237C0F007438D2 /* NetworkServiceAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419AA24237C0F007438D2 /* NetworkServiceAccount.swift */; };
 		EB2419AD2423A274007438D2 /* BillsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419AC2423A274007438D2 /* BillsModel.swift */; };
@@ -21,6 +22,10 @@
 		EBA7FFD82427BF6200DAACF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */; };
 		EBA7FFDC2427CC3000DAACF6 /* PhoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA7FFDA2427CC3000DAACF6 /* PhoneCell.swift */; };
 		EBA7FFDD2427CC3000DAACF6 /* PhoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA7FFDB2427CC3000DAACF6 /* PhoneCell.xib */; };
+		EBA7FFE02427D9A800DAACF6 /* MainBillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA7FFDE2427D9A800DAACF6 /* MainBillCell.swift */; };
+		EBA7FFE12427D9A800DAACF6 /* MainBillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA7FFDF2427D9A800DAACF6 /* MainBillCell.xib */; };
+		EBA7FFE42427DA3A00DAACF6 /* MainButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA7FFE22427DA3A00DAACF6 /* MainButtonCell.swift */; };
+		EBA7FFE52427DA3A00DAACF6 /* MainButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA7FFE32427DA3A00DAACF6 /* MainButtonCell.xib */; };
 		EBB3DE8E241CA28F004247F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DE8D241CA28F004247F8 /* AppDelegate.swift */; };
 		EBB3DE90241CA28F004247F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DE8F241CA28F004247F8 /* SceneDelegate.swift */; };
 		EBB3DE92241CA28F004247F8 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DE91241CA28F004247F8 /* GreetingViewController.swift */; };
@@ -33,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB03505E242A230600BADCE1 /* NetworkServiceChangePhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceChangePhone.swift; sourceTree = "<group>"; };
 		EB2419A8242360B5007438D2 /* FirstEnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstEnterViewController.swift; sourceTree = "<group>"; };
 		EB2419AA24237C0F007438D2 /* NetworkServiceAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceAccount.swift; sourceTree = "<group>"; };
 		EB2419AC2423A274007438D2 /* BillsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsModel.swift; sourceTree = "<group>"; };
@@ -47,6 +53,10 @@
 		EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EBA7FFDA2427CC3000DAACF6 /* PhoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhoneCell.swift; path = PhoneCell/PhoneCell.swift; sourceTree = "<group>"; };
 		EBA7FFDB2427CC3000DAACF6 /* PhoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PhoneCell.xib; path = PhoneCell/PhoneCell.xib; sourceTree = "<group>"; };
+		EBA7FFDE2427D9A800DAACF6 /* MainBillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainBillCell.swift; path = MainBillCell/MainBillCell.swift; sourceTree = "<group>"; };
+		EBA7FFDF2427D9A800DAACF6 /* MainBillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainBillCell.xib; path = MainBillCell/MainBillCell.xib; sourceTree = "<group>"; };
+		EBA7FFE22427DA3A00DAACF6 /* MainButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainButtonCell.swift; path = MainButtonCell/MainButtonCell.swift; sourceTree = "<group>"; };
+		EBA7FFE32427DA3A00DAACF6 /* MainButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainButtonCell.xib; path = MainButtonCell/MainButtonCell.xib; sourceTree = "<group>"; };
 		EBB3DE8A241CA28F004247F8 /* VladLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VladLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB3DE8D241CA28F004247F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB3DE8F241CA28F004247F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +108,10 @@
 			children = (
 				EBA7FFDA2427CC3000DAACF6 /* PhoneCell.swift */,
 				EBA7FFDB2427CC3000DAACF6 /* PhoneCell.xib */,
+				EBA7FFDE2427D9A800DAACF6 /* MainBillCell.swift */,
+				EBA7FFDF2427D9A800DAACF6 /* MainBillCell.xib */,
+				EBA7FFE22427DA3A00DAACF6 /* MainButtonCell.swift */,
+				EBA7FFE32427DA3A00DAACF6 /* MainButtonCell.xib */,
 			);
 			path = ViewControllerMain;
 			sourceTree = "<group>";
@@ -154,6 +168,7 @@
 			children = (
 				EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */,
 				EB2419AA24237C0F007438D2 /* NetworkServiceAccount.swift */,
+				EB03505E242A230600BADCE1 /* NetworkServiceChangePhone.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -217,7 +232,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBA7FFDD2427CC3000DAACF6 /* PhoneCell.xib in Resources */,
+				EBA7FFE12427D9A800DAACF6 /* MainBillCell.xib in Resources */,
 				EB2419DB2424F003007438D2 /* BillCell.xib in Resources */,
+				EBA7FFE52427DA3A00DAACF6 /* MainButtonCell.xib in Resources */,
 				EBB3DE9A241CA295004247F8 /* LaunchScreen.storyboard in Resources */,
 				EBB3DE97241CA295004247F8 /* Assets.xcassets in Resources */,
 				EB2419E42426197C007438D2 /* ButtonsCell.xib in Resources */,
@@ -233,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB03505F242A230600BADCE1 /* NetworkServiceChangePhone.swift in Sources */,
 				EB2419DA2424F003007438D2 /* BillCell.swift in Sources */,
 				EB93B27F241FE01A0082022E /* NetworkServiceAuth.swift in Sources */,
 				EBB3DE92241CA28F004247F8 /* GreetingViewController.swift in Sources */,
@@ -243,11 +261,13 @@
 				EB2419E724261D4B007438D2 /* LabelsCell.swift in Sources */,
 				EB2419AB24237C0F007438D2 /* NetworkServiceAccount.swift in Sources */,
 				EBB3DE8E241CA28F004247F8 /* AppDelegate.swift in Sources */,
+				EBA7FFE02427D9A800DAACF6 /* MainBillCell.swift in Sources */,
 				EBA7FFD82427BF6200DAACF6 /* MainViewController.swift in Sources */,
 				EB2419A9242360B5007438D2 /* FirstEnterViewController.swift in Sources */,
 				EB2419AD2423A274007438D2 /* BillsModel.swift in Sources */,
 				EBB3DEAE241E6238004247F8 /* MessageViewController.swift in Sources */,
 				EB93B27D241F991E0082022E /* PersonModel.swift in Sources */,
+				EBA7FFE42427DA3A00DAACF6 /* MainButtonCell.swift in Sources */,
 				EBB3DE90241CA28F004247F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

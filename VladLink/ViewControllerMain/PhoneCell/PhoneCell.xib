@@ -10,24 +10,19 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhoneCell" customModule="VladLink" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="322" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="322" height="40"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="322" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="322" height="40"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3Y-Md-CPb">
-                        <rect key="frame" x="1" y="15" width="203" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyu-AI-jAd">
-                        <rect key="frame" x="212" y="10" width="100" height="30"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyu-AI-jAd">
+                        <rect key="frame" x="212" y="11.5" width="100" height="28"/>
                         <color key="backgroundColor" red="0.091278024020000001" green="0.4943004251" blue="0.75826513770000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="hL1-Pb-Fge"/>
                         </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <state key="normal" title="ИЗМЕНИТЬ">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
@@ -35,19 +30,29 @@
                             <action selector="changeButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Vpo-cJ-34b"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3Y-Md-CPb">
+                        <rect key="frame" x="6" y="15" width="196" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="240" id="usy-PN-m5J"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="y3Y-Md-CPb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="1" id="7mg-1Y-h8i"/>
+                <constraint firstItem="y3Y-Md-CPb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="7mg-1Y-h8i"/>
                 <constraint firstItem="y3Y-Md-CPb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="GOk-wk-c1V"/>
-                <constraint firstItem="vyu-AI-jAd" firstAttribute="leading" secondItem="y3Y-Md-CPb" secondAttribute="trailing" constant="5" id="k2G-nM-5BC"/>
+                <constraint firstItem="vyu-AI-jAd" firstAttribute="centerY" secondItem="y3Y-Md-CPb" secondAttribute="centerY" id="mXS-CQ-Lmb"/>
+                <constraint firstAttribute="trailing" secondItem="vyu-AI-jAd" secondAttribute="trailing" constant="10" id="o1m-zQ-6w1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="322" height="50"/>
+            <size key="customSize" width="322" height="40"/>
             <connections>
                 <outlet property="phoneLabel" destination="y3Y-Md-CPb" id="87v-zT-MPz"/>
             </connections>
-            <point key="canvasLocation" x="334.78260869565219" y="83.705357142857139"/>
+            <point key="canvasLocation" x="334.78260869565219" y="79.6875"/>
         </collectionViewCell>
     </objects>
 </document>

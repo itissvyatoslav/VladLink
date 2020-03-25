@@ -146,6 +146,8 @@ class JSONAddPhoneVC{
     }
     
     func postMessageRequest(phoneNumber: String){
+        
+        
         let queue = DispatchQueue.global()
         let parametr = ["phone": "\(phoneNumber)"]
         let parametrs = ["data": parametr]
@@ -175,7 +177,6 @@ class JSONAddPhoneVC{
                         return
                     }
                     do {
-                        
                         let json = try JSONDecoder().decode(postMessageDataRequest.self, from: data)
                         print(json)
                         if json.status == 200 {
@@ -227,6 +228,7 @@ class JSONAddPhoneVC{
                     self.person.uid = (json.data?.uid)!
                     self.person.name = (json.data?.name)!
                     self.person.publicUids = (json.data!.public_uids) as! [String]
+                    self.person.phoneNumber = phoneNumber
                     semaphore.signal()
                 }
                 //print("!!!!! ---- \(json)")
@@ -234,6 +236,7 @@ class JSONAddPhoneVC{
             } catch {
                 print(error)
             }
+            self.person.phoneNumber = phoneNumber
         }.resume()
         semaphore.wait()
     }

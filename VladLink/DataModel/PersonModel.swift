@@ -10,6 +10,7 @@ import Foundation
 
 class PersonModel{
     var phoneNumber = "" //Номер телефона
+    var maybePhoneNumber = "" //Номер телефона до подтверждения
     var request_id = ""
     var callPhoneNumber = "" //Номер на который звонить
     var auth_token = ""

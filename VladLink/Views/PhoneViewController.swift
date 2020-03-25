@@ -33,7 +33,7 @@ class PhoneViewController: UIViewController{
         if person.auth_token == "" {
             infoWindow()
         } else {
-            let vc = storyboard?.instantiateViewController(identifier: "firstEnterVC") as! UINavigationController
+            let vc = storyboard?.instantiateViewController(identifier: "firstEnterVC") as! FirstEnterViewController
             self.present(vc, animated: true, completion: nil)
         }
     }

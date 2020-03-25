@@ -22,7 +22,7 @@ class MessageViewController: UIViewController{
     }
     @IBAction func nextViewController(_ sender: Any) {
         code = messageTextField.text!
-        network.postMessageAuth(phoneNumber: person.phoneNumber, request_id: person.request_id, code: code)
+        network.postMessageAuth(phoneNumber: person.maybePhoneNumber, request_id: person.request_id, code: code)
         if person.auth_token == "" {
             infoWindow()
         } else {
