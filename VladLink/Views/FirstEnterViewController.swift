@@ -13,14 +13,16 @@ class FirstEnterViewController: UIViewController {
     let network = JSONService()
     let person = PersonModel.sharedData
     let bill = BillModel.sharedData
+    let dataModel = DataService()
     
     @IBOutlet weak var billList: UICollectionView!
     
     override func viewDidLoad() {
         network.getBills(auth_token: person.auth_token)
         super.viewDidLoad()
-        print(bill.bills[0])
+ //       print(bill.bills[0])
         setView()
+        dataModel.saveData()
         
     }
     

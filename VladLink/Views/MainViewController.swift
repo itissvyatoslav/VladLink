@@ -16,6 +16,7 @@ class MainViewController: UIViewController{
     @IBOutlet weak var billList: UICollectionView!
     @IBOutlet weak var navBar: UINavigationBar!
     override func viewDidLoad() {
+        print(bill.bills)
         super.viewDidLoad()
         setView()
         setNavigationBanner()
@@ -82,7 +83,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
 extension MainViewController: PhoneCellDelegate{
     func changePhone() {
-        let vc = storyboard?.instantiateViewController(identifier: "addPhoneVC") as! AddPhoneViewController
+        let vc = storyboard?.instantiateViewController(identifier: "changePhoneVC") as! ChangePhoneViewController
         self.present(vc, animated: true)
         vc.infoLabel.font = UIFont.systemFont(ofSize: 18)
         vc.infoLabel.text = "Текущий номер телефона:\n\(person.formatedPhoneNumber)\nВведите ваш номер телефона"

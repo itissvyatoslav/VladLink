@@ -1,38 +1,47 @@
 //
-//  AddPhoneViewController.swift
+//  ChangePhoneViewController.swift
 //  VladLink
 //
-//  Created by Svyatoslav Vladimirovich on 14.03.2020.
+//  Created by Svyatoslav Vladimirovich on 26.03.2020.
 //  Copyright © 2020 Svyatoslav Vladimirovich. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class AddPhoneViewController: UIViewController{
+class ChangePhoneViewController: UIViewController{
     let person = PersonModel.sharedData
-    let networkServiceFirstEnter = JSONAddPhoneVC()
+    let networkServiceEdit = ChangePhoneNumber()
     var phoneNumber = ""
     
+    @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var firstSwitch: UISwitch!
     @IBOutlet weak var secondSwitch: UISwitch!
-    @IBOutlet weak var infoLabel: UILabel!
+    
+    @IBAction func firstSwitchAction(_ sender: Any) {
+        firstSwitch.isOn = true
+        secondSwitch.isOn = false
+    }
+    
+    @IBAction func secondSwitchAction(_ sender: Any) {
+        firstSwitch.isOn = false
+        secondSwitch.isOn = true
+    }
     
     @IBAction func nextViewControllerAction(_ sender: Any) {
-        
         person.formatedPhoneNumber = phoneTextField.text!
         phoneNumber = deformattedNumber(number: phoneTextField.text!)
-        person.maybePhoneNumber = phoneNumber
+        person.phoneNumber = phoneNumber
         if phoneTextField.text == "" {infoWindow()} else{
             if firstSwitch.isOn {
-                networkServiceFirstEnter.postPhoneRequest(phoneNumber: phoneNumber)
-                let vc = storyboard?.instantiateViewController(identifier: "callVC") as! PhoneViewController
+                networkServiceEdit.postPhoneRequest(phoneNumber: phoneNumber)
+                let vc = storyboard?.instantiateViewController(identifier: "callChangeVC") as! CallChangeViewController
                 vc.phone = phoneTextField.text!
                 vc.phoneCall = person.callPhoneNumber
                 self.present(vc, animated: true, completion: nil)
             } else {
-                networkServiceFirstEnter.postMessageRequest(phoneNumber: phoneNumber)
+                networkServiceEdit.postMessageRequest(phoneNumber: phoneNumber)
                 let vc = storyboard?.instantiateViewController(identifier: "messageVC") as! MessageViewController
                 vc.phone = phoneTextField.text!
                 self.present(vc, animated: true, completion: nil)
@@ -41,23 +50,14 @@ class AddPhoneViewController: UIViewController{
     }
     
     @IBAction func previousViewControllerAction(_ sender: Any) {
-        self.dismiss(animated: true)
-    }
-   
-    @IBAction func switch1Action(_ sender: Any) {
-        firstSwitch.isOn = true
-        secondSwitch.isOn = false
-    }
-    @IBAction func switch2Action(_ sender: Any) {
-        firstSwitch.isOn = false
-        secondSwitch.isOn = true
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Hi nice cock")
         phoneTextField.delegate = self
     }
-    
     private func formattedNumber(number: String) -> String {
         let cleanPhoneNumber = number.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
         let mask = "X (XXX) XXX-XXXX"
@@ -101,7 +101,7 @@ class AddPhoneViewController: UIViewController{
     }
 }
 
-extension AddPhoneViewController: UITextFieldDelegate{
+extension ChangePhoneViewController: UITextFieldDelegate{
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return false }
         let newString = (text as NSString).replacingCharacters(in: range, with: string)
@@ -109,3 +109,4 @@ extension AddPhoneViewController: UITextFieldDelegate{
         return false
     }
 }
+

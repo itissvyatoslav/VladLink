@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6F63D998673F3135560D998 /* Pods_VladLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2609D08250117494FD3A6D5E /* Pods_VladLink.framework */; };
 		EB03505F242A230600BADCE1 /* NetworkServiceChangePhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03505E242A230600BADCE1 /* NetworkServiceChangePhone.swift */; };
+		EB04B02C242CEB9D006CC8CD /* CallChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB04B02B242CEB9D006CC8CD /* CallChangeViewController.swift */; };
 		EB2419A9242360B5007438D2 /* FirstEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419A8242360B5007438D2 /* FirstEnterViewController.swift */; };
 		EB2419AB24237C0F007438D2 /* NetworkServiceAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419AA24237C0F007438D2 /* NetworkServiceAccount.swift */; };
 		EB2419AD2423A274007438D2 /* BillsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419AC2423A274007438D2 /* BillsModel.swift */; };
@@ -17,6 +19,8 @@
 		EB2419E42426197C007438D2 /* ButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB2419E22426197C007438D2 /* ButtonsCell.xib */; };
 		EB2419E724261D4B007438D2 /* LabelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419E524261D4B007438D2 /* LabelsCell.swift */; };
 		EB2419E824261D4B007438D2 /* LabelsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB2419E624261D4B007438D2 /* LabelsCell.xib */; };
+		EB510DCE242BB40D00CD0C66 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB510DCD242BB40D00CD0C66 /* DataService.swift */; };
+		EB510DD0242CD6FE00CD0C66 /* ChangePhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB510DCF242CD6FE00CD0C66 /* ChangePhoneViewController.swift */; };
 		EB93B27D241F991E0082022E /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93B27C241F991E0082022E /* PersonModel.swift */; };
 		EB93B27F241FE01A0082022E /* NetworkServiceAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */; };
 		EBA7FFD82427BF6200DAACF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */; };
@@ -38,7 +42,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2609D08250117494FD3A6D5E /* Pods_VladLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VladLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D942D642F5F5643902F007D /* Pods-VladLink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VladLink.release.xcconfig"; path = "Target Support Files/Pods-VladLink/Pods-VladLink.release.xcconfig"; sourceTree = "<group>"; };
+		84192AE6C70AFFCE98034797 /* Pods-VladLink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VladLink.debug.xcconfig"; path = "Target Support Files/Pods-VladLink/Pods-VladLink.debug.xcconfig"; sourceTree = "<group>"; };
 		EB03505E242A230600BADCE1 /* NetworkServiceChangePhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceChangePhone.swift; sourceTree = "<group>"; };
+		EB04B02B242CEB9D006CC8CD /* CallChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallChangeViewController.swift; sourceTree = "<group>"; };
 		EB2419A8242360B5007438D2 /* FirstEnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstEnterViewController.swift; sourceTree = "<group>"; };
 		EB2419AA24237C0F007438D2 /* NetworkServiceAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceAccount.swift; sourceTree = "<group>"; };
 		EB2419AC2423A274007438D2 /* BillsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsModel.swift; sourceTree = "<group>"; };
@@ -48,6 +56,8 @@
 		EB2419E22426197C007438D2 /* ButtonsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ButtonsCell.xib; path = ButtonsCell/ButtonsCell.xib; sourceTree = "<group>"; };
 		EB2419E524261D4B007438D2 /* LabelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LabelsCell.swift; path = LabelsCell/LabelsCell.swift; sourceTree = "<group>"; };
 		EB2419E624261D4B007438D2 /* LabelsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LabelsCell.xib; path = LabelsCell/LabelsCell.xib; sourceTree = "<group>"; };
+		EB510DCD242BB40D00CD0C66 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		EB510DCF242CD6FE00CD0C66 /* ChangePhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePhoneViewController.swift; sourceTree = "<group>"; };
 		EB93B27C241F991E0082022E /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkServiceAuth.swift; path = VladLink/DataModel/NetworkServiceAuth.swift; sourceTree = SOURCE_ROOT; };
 		EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -75,12 +85,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6F63D998673F3135560D998 /* Pods_VladLink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E89ED687CA38EFC27256FB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84192AE6C70AFFCE98034797 /* Pods-VladLink.debug.xcconfig */,
+				5D942D642F5F5643902F007D /* Pods-VladLink.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6B645FD549FF1B63EF8F1520 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2609D08250117494FD3A6D5E /* Pods_VladLink.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EB2419AE2424AE31007438D2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +149,8 @@
 			children = (
 				EBB3DE8C241CA28F004247F8 /* VladLink */,
 				EBB3DE8B241CA28F004247F8 /* Products */,
+				1E89ED687CA38EFC27256FB7 /* Pods */,
+				6B645FD549FF1B63EF8F1520 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +189,8 @@
 				EBB3DEAD241E6238004247F8 /* MessageViewController.swift */,
 				EB2419A8242360B5007438D2 /* FirstEnterViewController.swift */,
 				EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */,
+				EB510DCF242CD6FE00CD0C66 /* ChangePhoneViewController.swift */,
+				EB04B02B242CEB9D006CC8CD /* CallChangeViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +201,7 @@
 				EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */,
 				EB2419AA24237C0F007438D2 /* NetworkServiceAccount.swift */,
 				EB03505E242A230600BADCE1 /* NetworkServiceChangePhone.swift */,
+				EB510DCD242BB40D00CD0C66 /* DataService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -180,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBB3DE9E241CA295004247F8 /* Build configuration list for PBXNativeTarget "VladLink" */;
 			buildPhases = (
+				829C47319D97EBF5BD0686F0 /* [CP] Check Pods Manifest.lock */,
 				EBB3DE86241CA28F004247F8 /* Sources */,
 				EBB3DE87241CA28F004247F8 /* Frameworks */,
 				EBB3DE88241CA28F004247F8 /* Resources */,
+				323E04910D4606DB54445277 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -245,11 +280,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		323E04910D4606DB54445277 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VladLink/Pods-VladLink-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VladLink/Pods-VladLink-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VladLink/Pods-VladLink-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		829C47319D97EBF5BD0686F0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VladLink-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EBB3DE86241CA28F004247F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB510DD0242CD6FE00CD0C66 /* ChangePhoneViewController.swift in Sources */,
 				EB03505F242A230600BADCE1 /* NetworkServiceChangePhone.swift in Sources */,
 				EB2419DA2424F003007438D2 /* BillCell.swift in Sources */,
 				EB93B27F241FE01A0082022E /* NetworkServiceAuth.swift in Sources */,
@@ -257,6 +335,7 @@
 				EBB3DEAC241E6227004247F8 /* PhoneViewController.swift in Sources */,
 				EBA7FFDC2427CC3000DAACF6 /* PhoneCell.swift in Sources */,
 				EB2419E32426197C007438D2 /* ButtonsCell.swift in Sources */,
+				EB04B02C242CEB9D006CC8CD /* CallChangeViewController.swift in Sources */,
 				EBB3DEA8241CE3B3004247F8 /* AddPhoneViewController.swift in Sources */,
 				EB2419E724261D4B007438D2 /* LabelsCell.swift in Sources */,
 				EB2419AB24237C0F007438D2 /* NetworkServiceAccount.swift in Sources */,
@@ -269,6 +348,7 @@
 				EB93B27D241F991E0082022E /* PersonModel.swift in Sources */,
 				EBA7FFE42427DA3A00DAACF6 /* MainButtonCell.swift in Sources */,
 				EBB3DE90241CA28F004247F8 /* SceneDelegate.swift in Sources */,
+				EB510DCE242BB40D00CD0C66 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +490,7 @@
 		};
 		EBB3DE9F241CA295004247F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84192AE6C70AFFCE98034797 /* Pods-VladLink.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -428,6 +509,7 @@
 		};
 		EBB3DEA0241CA295004247F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D942D642F5F5643902F007D /* Pods-VladLink.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

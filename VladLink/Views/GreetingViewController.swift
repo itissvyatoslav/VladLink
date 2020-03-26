@@ -9,7 +9,6 @@
 import UIKit
 
 class GreetingViewController: UIViewController {
-    let ns = JSONAddPhoneVC()
     
     let titleWindow = "Внимание!"
     let messageWindow =   """

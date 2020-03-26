@@ -10,11 +10,29 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    var window: UIWindow?
+    
+    let dataModel = DataService()
+    let person = PersonModel.sharedData
+    let network = JSONService()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //dataModel.getData()
+        //print(person.auth_token)
+        //print(person.phoneNumber)
+        //network.getBills(auth_token: person.auth_token)
+        
+        //3cf1c3b9fa0539a2895e50c95dbfd66a39855373
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "firstVladLink")
+  //     if person.auth_token != "" {
+  //         print("I am here")
+  //         initialViewController = storyboard.instantiateViewController(withIdentifier: "mainVC")
+  //     }
+        
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
         return true
     }
 
