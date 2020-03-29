@@ -120,28 +120,31 @@ class JSONService{
             }
             do {
                 let json = try JSONDecoder().decode(requestBill.self, from: data)
+                print("!!!!!!!!!!!!!!!!!!!!!!\(json)")
                //let json = try JSONSerialization.jsonObject(with: data, options: [])
-               self.billLoaded.addedBill.balls = (json.data[0]?.balls)!
-               self.billLoaded.addedBill.bill = (json.data[0]?.bill)!
-               self.billLoaded.addedBill.block = (json.data[0]?.block)!
-               self.billLoaded.addedBill.city_id = (json.data[0]?.city_id)!
-               self.billLoaded.addedBill.email = (json.data[0]?.email)
-               self.billLoaded.addedBill.full_name = (json.data[0]?.full_name)!
-               self.billLoaded.addedBill.id = (json.data[0]?.id)!
-               self.billLoaded.addedBill.is_juridical = (json.data[0]?.is_juridical)!
-               self.billLoaded.addedBill.is_sms = json.data[0]!.is_sms
-               self.billLoaded.addedBill.skidko = json.data[0]!.skidko
-               self.billLoaded.addedBill.tariff = json.data[0]!.tariff
-               self.billLoaded.addedBill.tariff_current.abonpay = json.data[0]!.tariff_current.abonpay
-               self.billLoaded.addedBill.tariff_current.tid = json.data[0]!.tariff_current.tid
-               self.billLoaded.addedBill.tariff_current.tname = json.data[0]!.tariff_current.tname
-               self.billLoaded.addedBill.u_address[0].descr = json.data[0]!.u_address[0].descr
-               self.billLoaded.addedBill.u_address[0].did = json.data[0]!.u_address[0].did
-               self.billLoaded.addedBill.u_address[0].dom_name = json.data[0]!.u_address[0].dom_name
-               self.billLoaded.addedBill.u_address[0].floor = json.data[0]!.u_address[0].floor
-               self.billLoaded.addedBill.u_address[0].porch = json.data[0]!.u_address[0].porch
-               self.billLoaded.addedBill.ulogin = json.data[0]!.ulogin
-               self.billLoaded.bills.append(self.billLoaded.addedBill)
+                for number in 0..<json.data.count {
+                    self.billLoaded.addedBill.balls = (json.data[number]?.balls)!
+                    self.billLoaded.addedBill.bill = (json.data[number]?.bill)!
+                    self.billLoaded.addedBill.block = (json.data[number]?.block)!
+                    self.billLoaded.addedBill.city_id = (json.data[number]?.city_id)!
+                    self.billLoaded.addedBill.email = (json.data[number]?.email)
+                    self.billLoaded.addedBill.full_name = (json.data[number]?.full_name)!
+                    self.billLoaded.addedBill.id = (json.data[number]?.id)!
+                    self.billLoaded.addedBill.is_juridical = (json.data[number]?.is_juridical)!
+                    self.billLoaded.addedBill.is_sms = json.data[number]!.is_sms
+                    self.billLoaded.addedBill.skidko = json.data[number]!.skidko
+                    self.billLoaded.addedBill.tariff = json.data[number]!.tariff
+                    self.billLoaded.addedBill.tariff_current.abonpay = json.data[number]!.tariff_current.abonpay
+                    self.billLoaded.addedBill.tariff_current.tid = json.data[number]!.tariff_current.tid
+                    self.billLoaded.addedBill.tariff_current.tname = json.data[number]!.tariff_current.tname
+                    self.billLoaded.addedBill.u_address[0].descr = json.data[number]!.u_address[0].descr
+                    self.billLoaded.addedBill.u_address[0].did = json.data[number]!.u_address[0].did
+                    self.billLoaded.addedBill.u_address[0].dom_name = json.data[number]!.u_address[0].dom_name
+                    self.billLoaded.addedBill.u_address[0].floor = json.data[number]!.u_address[0].floor
+                    self.billLoaded.addedBill.u_address[0].porch = json.data[number]!.u_address[0].porch
+                    self.billLoaded.addedBill.ulogin = json.data[0]!.ulogin
+                    self.billLoaded.bills.append(self.billLoaded.addedBill)
+                }
                 //print(json.error_message)
             } catch {
                 print(error)

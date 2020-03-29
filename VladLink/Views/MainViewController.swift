@@ -98,6 +98,8 @@ extension MainViewController: MainButtonCellDelegate{
     
     func newAdressAction() {
         print("newAdress")
+        let vc = storyboard?.instantiateViewController(withIdentifier: "newAdressVC") as! NewAdressViewController
+        self.present(vc, animated: true)
     }
     
 

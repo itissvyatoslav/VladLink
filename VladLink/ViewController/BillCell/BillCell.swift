@@ -26,6 +26,7 @@ class BillCell: UICollectionViewCell {
     }
     
     func setUp(number: Int){
+        switcher.isOn = false
         billNumber.text = "Лицевой счет \(bill.bills[number].id)"
         billName.text = bill.bills[number].full_name
         billAddress.text = bill.bills[number].u_address[0].dom_name

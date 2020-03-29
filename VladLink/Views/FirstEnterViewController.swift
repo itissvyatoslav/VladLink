@@ -14,6 +14,7 @@ class FirstEnterViewController: UIViewController {
     let person = PersonModel.sharedData
     let bill = BillModel.sharedData
     let dataModel = DataService()
+    var labels = [String]()
     
     @IBOutlet weak var billList: UICollectionView!
     
@@ -24,6 +25,12 @@ class FirstEnterViewController: UIViewController {
         setView()
         dataModel.saveData()
         
+    }
+    
+    private func setNewLabels(){
+        for number in 0..<bill.bills.count{
+            
+        }
     }
     
     private func setView(){
@@ -37,8 +44,8 @@ class FirstEnterViewController: UIViewController {
 
 extension FirstEnterViewController: ButtonsCellDelegate{
     func nextViewController() {
+        print(labels)
         let vc = storyboard?.instantiateViewController(identifier: "mainVC") as! MainViewController
-        //self.navigationController?.pushViewController(vc, animated: true)
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -66,6 +73,7 @@ extension FirstEnterViewController: UICollectionViewDelegate, UICollectionViewDa
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BillCell", for: indexPath) as! BillCell
             cell.setUp(number: indexPath.item - 1)
+            labels.append(cell.commentTextField.text ?? "")
             return cell
         }
     }

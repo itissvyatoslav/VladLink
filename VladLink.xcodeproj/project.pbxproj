@@ -10,6 +10,10 @@
 		A6F63D998673F3135560D998 /* Pods_VladLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2609D08250117494FD3A6D5E /* Pods_VladLink.framework */; };
 		EB03505F242A230600BADCE1 /* NetworkServiceChangePhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03505E242A230600BADCE1 /* NetworkServiceChangePhone.swift */; };
 		EB04B02C242CEB9D006CC8CD /* CallChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB04B02B242CEB9D006CC8CD /* CallChangeViewController.swift */; };
+		EB04B02E242CFAA6006CC8CD /* MessageChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB04B02D242CFAA6006CC8CD /* MessageChangeViewController.swift */; };
+		EB04B030242E1B38006CC8CD /* NetworkServiceBillChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB04B02F242E1B38006CC8CD /* NetworkServiceBillChange.swift */; };
+		EB04B032242E51FF006CC8CD /* NewAdressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB04B031242E51FF006CC8CD /* NewAdressViewController.swift */; };
+		EB04B034242E5653006CC8CD /* NetworkServiceAdress.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB04B033242E5653006CC8CD /* NetworkServiceAdress.swift */; };
 		EB2419A9242360B5007438D2 /* FirstEnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419A8242360B5007438D2 /* FirstEnterViewController.swift */; };
 		EB2419AB24237C0F007438D2 /* NetworkServiceAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419AA24237C0F007438D2 /* NetworkServiceAccount.swift */; };
 		EB2419AD2423A274007438D2 /* BillsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2419AC2423A274007438D2 /* BillsModel.swift */; };
@@ -47,6 +51,10 @@
 		84192AE6C70AFFCE98034797 /* Pods-VladLink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VladLink.debug.xcconfig"; path = "Target Support Files/Pods-VladLink/Pods-VladLink.debug.xcconfig"; sourceTree = "<group>"; };
 		EB03505E242A230600BADCE1 /* NetworkServiceChangePhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceChangePhone.swift; sourceTree = "<group>"; };
 		EB04B02B242CEB9D006CC8CD /* CallChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallChangeViewController.swift; sourceTree = "<group>"; };
+		EB04B02D242CFAA6006CC8CD /* MessageChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageChangeViewController.swift; sourceTree = "<group>"; };
+		EB04B02F242E1B38006CC8CD /* NetworkServiceBillChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceBillChange.swift; sourceTree = "<group>"; };
+		EB04B031242E51FF006CC8CD /* NewAdressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAdressViewController.swift; sourceTree = "<group>"; };
+		EB04B033242E5653006CC8CD /* NetworkServiceAdress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceAdress.swift; sourceTree = "<group>"; };
 		EB2419A8242360B5007438D2 /* FirstEnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstEnterViewController.swift; sourceTree = "<group>"; };
 		EB2419AA24237C0F007438D2 /* NetworkServiceAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceAccount.swift; sourceTree = "<group>"; };
 		EB2419AC2423A274007438D2 /* BillsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsModel.swift; sourceTree = "<group>"; };
@@ -191,6 +199,8 @@
 				EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */,
 				EB510DCF242CD6FE00CD0C66 /* ChangePhoneViewController.swift */,
 				EB04B02B242CEB9D006CC8CD /* CallChangeViewController.swift */,
+				EB04B02D242CFAA6006CC8CD /* MessageChangeViewController.swift */,
+				EB04B031242E51FF006CC8CD /* NewAdressViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,6 +211,8 @@
 				EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */,
 				EB2419AA24237C0F007438D2 /* NetworkServiceAccount.swift */,
 				EB03505E242A230600BADCE1 /* NetworkServiceChangePhone.swift */,
+				EB04B02F242E1B38006CC8CD /* NetworkServiceBillChange.swift */,
+				EB04B033242E5653006CC8CD /* NetworkServiceAdress.swift */,
 				EB510DCD242BB40D00CD0C66 /* DataService.swift */,
 			);
 			path = Service;
@@ -331,7 +343,9 @@
 				EB03505F242A230600BADCE1 /* NetworkServiceChangePhone.swift in Sources */,
 				EB2419DA2424F003007438D2 /* BillCell.swift in Sources */,
 				EB93B27F241FE01A0082022E /* NetworkServiceAuth.swift in Sources */,
+				EB04B034242E5653006CC8CD /* NetworkServiceAdress.swift in Sources */,
 				EBB3DE92241CA28F004247F8 /* GreetingViewController.swift in Sources */,
+				EB04B02E242CFAA6006CC8CD /* MessageChangeViewController.swift in Sources */,
 				EBB3DEAC241E6227004247F8 /* PhoneViewController.swift in Sources */,
 				EBA7FFDC2427CC3000DAACF6 /* PhoneCell.swift in Sources */,
 				EB2419E32426197C007438D2 /* ButtonsCell.swift in Sources */,
@@ -342,11 +356,13 @@
 				EBB3DE8E241CA28F004247F8 /* AppDelegate.swift in Sources */,
 				EBA7FFE02427D9A800DAACF6 /* MainBillCell.swift in Sources */,
 				EBA7FFD82427BF6200DAACF6 /* MainViewController.swift in Sources */,
+				EB04B032242E51FF006CC8CD /* NewAdressViewController.swift in Sources */,
 				EB2419A9242360B5007438D2 /* FirstEnterViewController.swift in Sources */,
 				EB2419AD2423A274007438D2 /* BillsModel.swift in Sources */,
 				EBB3DEAE241E6238004247F8 /* MessageViewController.swift in Sources */,
 				EB93B27D241F991E0082022E /* PersonModel.swift in Sources */,
 				EBA7FFE42427DA3A00DAACF6 /* MainButtonCell.swift in Sources */,
+				EB04B030242E1B38006CC8CD /* NetworkServiceBillChange.swift in Sources */,
 				EBB3DE90241CA28F004247F8 /* SceneDelegate.swift in Sources */,
 				EB510DCE242BB40D00CD0C66 /* DataService.swift in Sources */,
 			);

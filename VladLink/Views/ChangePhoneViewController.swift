@@ -32,7 +32,7 @@ class ChangePhoneViewController: UIViewController{
     @IBAction func nextViewControllerAction(_ sender: Any) {
         person.formatedPhoneNumber = phoneTextField.text!
         phoneNumber = deformattedNumber(number: phoneTextField.text!)
-        person.phoneNumber = phoneNumber
+        person.maybePhoneNumber = phoneNumber
         if phoneTextField.text == "" {infoWindow()} else{
             if firstSwitch.isOn {
                 networkServiceEdit.postPhoneRequest(phoneNumber: phoneNumber)
@@ -42,7 +42,7 @@ class ChangePhoneViewController: UIViewController{
                 self.present(vc, animated: true, completion: nil)
             } else {
                 networkServiceEdit.postMessageRequest(phoneNumber: phoneNumber)
-                let vc = storyboard?.instantiateViewController(identifier: "messageVC") as! MessageViewController
+                let vc = storyboard?.instantiateViewController(identifier: "messageChangeVC") as! MessageChangeViewController
                 vc.phone = phoneTextField.text!
                 self.present(vc, animated: true, completion: nil)
             }
