@@ -22,29 +22,42 @@ class NewAdressViewController: UIViewController{
     @IBOutlet weak var flatTextField: UITextField!
     
     @IBAction func sendRequestAction(_ sender: Any) {
-        
+        if (cityTextField.text != nil && streetTextField.text != nil && buildingTextField.text != nil && porchTextField.text != nil && floorTextField.text != nil && flatTextField.text != nil){
+            adressNetwork.newAdress(did: adress.buildingId[buildingTextField.selectedIndex!], flat: flatTextField.text!, porch: porchTextField.text!, floor: floorTextField.text!)
+        }
     }
     
     
     override func viewDidLoad() {
         adressNetwork.showCitiesList()
-        adressNetwork.showStreetList(city_id: adress.citiesId[0], streetName: "")
         super.viewDidLoad()
         setDrops()
     }
     
     private func setDrops(){
-        streetTextField.delegate = self
+        cityTextField.delegate = self
+        //streetTextField.delegate = self
         cityTextField.optionArray = adress.citiesName
-        adressNetwork.showStreetList(city_id: adress.citiesId[0], streetName: "")
-        streetTextField.optionArray = adress.streetsName//["1street", "2street", "3 street"]
-        buildingTextField.optionArray = ["1building", "2building"]
     }
 }
 
 
 extension NewAdressViewController: UITextFieldDelegate{
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-    //    adressNetwork.showStreetList(city_id: adress.citiesId[0], streetName: textField.text ?? "")
+   // func textFieldDidChangeSelection(_ textField: UITextField) {
+   //     guard let number = cityTextField.selectedIndex else { return  }
+   //     print(number)
+   //    // adressNetwork.showStreetList(city_id: adress.citiesId[number], streetName: "")
+   // }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let number1 = cityTextField.selectedIndex ?? 0
+        print(number1)
+        adressNetwork.showStreetList(city_id: adress.citiesId[number1], streetName: "")
+        streetTextField.optionArray = adress.streetsName
+        
+        let number2 = streetTextField.selectedIndex ?? 0
+        print(number2)
+        adressNetwork.showBuildingList(street_id: adress.streetsId[number2], buildingNumber: "")
+        buildingTextField.optionArray = adress.dname
     }
+
 }

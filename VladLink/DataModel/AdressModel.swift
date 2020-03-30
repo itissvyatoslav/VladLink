@@ -16,5 +16,10 @@ class AdressModel {
     var streetsName = [String]()
     var streetsId = [String]()
     
+    var buildingId = [String]()
+    var dname = [String]()
+    
+    var state: Int = 0
+    
     static let sharedData = AdressModel()
 }

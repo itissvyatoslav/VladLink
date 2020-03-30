@@ -97,6 +97,7 @@ class NewAdress{
                //let json = try JSONSerialization.jsonObject(with: data, options: [])
                //print(json)
                 self.adress.streetsName.removeAll()
+                self.adress.streetsId.removeAll()
                 let json = try JSONDecoder().decode(answerReceive.self, from: data)
                 for number in 0..<json.data.count {
                     addStreet = json.data[number]
@@ -115,7 +116,7 @@ class NewAdress{
     
     func showBuildingList(street_id: String, buildingNumber: String){
         struct answerReceive: Codable{
-            var status: String
+            var status: Int
             var data: [dataReceive]
             var paginate: paginateReceive
         }
@@ -131,6 +132,7 @@ class NewAdress{
             var count_item: Int
         }
         
+        let semaphore = DispatchSemaphore (value: 0)
         var request = URLRequest(url: URL(string: "https://test-api.vladlink.ru/v1/address/doms?s_id=\(street_id)&name=\(buildingNumber)&select=id%2Cdname%2Cdcorp&order=dname%2Cdcorp&limit=20")!,timeoutInterval: Double.infinity)
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("\(person.auth_token)", forHTTPHeaderField: "Authorization")
@@ -138,30 +140,46 @@ class NewAdress{
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            var addBuilding: dataReceive
             guard let data = data else {
                 print(String(describing: error))
                 return
             }
             do {
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
-                //let json = try JSONDecoder().decode(answerReceive.self, from: data)
+               //let json = try JSONSerialization.jsonObject(with: data, options: [])
+               //print(json)
+                self.adress.buildingId.removeAll()
+                self.adress.dname.removeAll()
+                let json = try JSONDecoder().decode(answerReceive.self, from: data)
+                for number in 0..<json.data.count{
+                    addBuilding = json.data[number]
+                    self.adress.buildingId.append(addBuilding.id)
+                    let corp = Int(addBuilding.dcorp)
+                    if corp != nil{
+                        self.adress.dname.append("\(addBuilding.dname)/\(addBuilding.dcorp)")
+                    } else {
+                        self.adress.dname.append("\(addBuilding.dname)\(addBuilding.dcorp)")
+                    }
+                }
+                print("build succes")
             } catch {
                 print(error)
             }
+            semaphore.signal()
         }
         task.resume()
+        semaphore.wait()
     }
     
     func newAdress(did: String, flat: String, porch: String, floor: String){
         struct answerReceive: Codable{
-            var status: String
+            var status: Int
             var data: dataReceive
         }
         
         struct dataReceive: Codable{
-            var address: String
-            var connect_id: String
+            var address: String?
+            var connect_id: String?
             var state: Int
         }
         
@@ -193,12 +211,11 @@ class NewAdress{
                 return
             }
             do {
-                //let json = try JSONDecoder().decode(answerReceive.self, from: data)
-                let json = try JSONSerialization.jsonObject(with: data, options: [])// as! errorReceive
-                //  if json.status == 200 {
-                //   self.person.request_id = json.data.request_id
-                //  }
+                let json = try JSONDecoder().decode(answerReceive.self, from: data)
+                //let json = try JSONSerialization.jsonObject(with: data, options: [])
                 print(json)
+                self.adress.state = json.data.state
+                print(self.adress.state)
             } catch {
                 print(error)
             }
