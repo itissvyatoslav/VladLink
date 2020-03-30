@@ -23,7 +23,7 @@ class DataService {
     }
     
     func getData(){
-        var semaphore = DispatchSemaphore (value: 0)
+        let semaphore = DispatchSemaphore (value: 0)
 
         let data = Locksmith.loadDataForUserAccount(userAccount: "MainUser") ?? ["auth_token": "", "phoneNumber": ""]
         person.auth_token = data["auth_token"] as! String

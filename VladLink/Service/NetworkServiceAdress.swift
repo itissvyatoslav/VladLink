@@ -11,10 +11,13 @@ import Foundation
 
 class NewAdress{
     let person = PersonModel.sharedData
+    let adress = AdressModel.sharedData
     
     func showCitiesList(){
+        
+        
         struct answerReceive: Codable{
-            var status: String
+            var status: Int
             var data: [dataReceive]
             var paginate: paginateReceive
         }
@@ -29,31 +32,41 @@ class NewAdress{
             var count_item: Int
         }
         
-        var request = URLRequest(url: URL(string: "https://test-api.vladlink.ru/v1/address/cities")!,timeoutInterval: Double.infinity)
+        var semaphore = DispatchSemaphore (value: 0)
+        var request = URLRequest(url: URL(string: "https://test-api.vladlink.ru/v1/address/cities?select=id%2Csname&order=sname")!,timeoutInterval: Double.infinity)
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("\(person.auth_token)", forHTTPHeaderField: "Authorization")
         
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            var addCity: dataReceive
             guard let data = data else {
                 print(String(describing: error))
                 return
             }
             do {
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
-                //let json = try JSONDecoder().decode(answerReceive.self, from: data)
+                //let json = try JSONSerialization.jsonObject(with: data, options: [])
+               // print(json)
+                let json = try JSONDecoder().decode(answerReceive.self, from: data)
+                //print(json.data[0].sname)
+                for number in 0..<json.data.count {
+                    addCity = json.data[number]
+                    self.adress.citiesName.append(addCity.sname)
+                    self.adress.citiesId.append(addCity.id)
+                }
             } catch {
                 print(error)
             }
+            semaphore.signal()
         }
         task.resume()
+        semaphore.wait()
     }
     
     func showStreetList(city_id: String, streetName: String){
         struct answerReceive: Codable{
-            var status: String
+            var status: Int
             var data: [dataReceive]
             var paginate: paginateReceive
         }
@@ -67,27 +80,37 @@ class NewAdress{
             var count_page: Int
             var count_item: Int
         }
-        
-        var request = URLRequest(url: URL(string: "https://test-api.vladlink.ru/v1/address/streets?city_id=\(city_id)&name=\(streetName)&select=id%2Csname&order=sname&limit=20")!,timeoutInterval: Double.infinity)
+        let semaphore = DispatchSemaphore (value: 0)
+        var request = URLRequest(url: URL(string: "https://test-api.vladlink.ru/v1/address/streets?city_id=\(city_id)&name=\(streetName)&select=id%2Csname&order=sname&limit=5")!,timeoutInterval: Double.infinity)
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("\(person.auth_token)", forHTTPHeaderField: "Authorization")
         
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            var addStreet: dataReceive
             guard let data = data else {
                 print(String(describing: error))
                 return
             }
             do {
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
-                //let json = try JSONDecoder().decode(answerReceive.self, from: data)
+               //let json = try JSONSerialization.jsonObject(with: data, options: [])
+               //print(json)
+                self.adress.streetsName.removeAll()
+                let json = try JSONDecoder().decode(answerReceive.self, from: data)
+                for number in 0..<json.data.count {
+                    addStreet = json.data[number]
+                    self.adress.streetsId.append(addStreet.id)
+                    self.adress.streetsName.append(addStreet.sname)
+                }
+                //print(self.adress.streetsName)
             } catch {
                 print(error)
             }
+            semaphore.signal()
         }
         task.resume()
+        semaphore.wait()
     }
     
     func showBuildingList(street_id: String, buildingNumber: String){

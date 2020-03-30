@@ -43,6 +43,7 @@
 		EBB3DEA8241CE3B3004247F8 /* AddPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DEA7241CE3B3004247F8 /* AddPhoneViewController.swift */; };
 		EBB3DEAC241E6227004247F8 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DEAB241E6227004247F8 /* PhoneViewController.swift */; };
 		EBB3DEAE241E6238004247F8 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DEAD241E6238004247F8 /* MessageViewController.swift */; };
+		EBC68990243097CF00BB661C /* AdressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6898F243097CF00BB661C /* AdressModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		EBB3DEA7241CE3B3004247F8 /* AddPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneViewController.swift; sourceTree = "<group>"; };
 		EBB3DEAB241E6227004247F8 /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		EBB3DEAD241E6238004247F8 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		EBC6898F243097CF00BB661C /* AdressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			children = (
 				EB93B27C241F991E0082022E /* PersonModel.swift */,
 				EB2419AC2423A274007438D2 /* BillsModel.swift */,
+				EBC6898F243097CF00BB661C /* AdressModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				EBB3DE92241CA28F004247F8 /* GreetingViewController.swift in Sources */,
 				EB04B02E242CFAA6006CC8CD /* MessageChangeViewController.swift in Sources */,
 				EBB3DEAC241E6227004247F8 /* PhoneViewController.swift in Sources */,
+				EBC68990243097CF00BB661C /* AdressModel.swift in Sources */,
 				EBA7FFDC2427CC3000DAACF6 /* PhoneCell.swift in Sources */,
 				EB2419E32426197C007438D2 /* ButtonsCell.swift in Sources */,
 				EB04B02C242CEB9D006CC8CD /* CallChangeViewController.swift in Sources */,
