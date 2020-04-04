@@ -25,6 +25,23 @@
 		EB2419E824261D4B007438D2 /* LabelsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB2419E624261D4B007438D2 /* LabelsCell.xib */; };
 		EB510DCE242BB40D00CD0C66 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB510DCD242BB40D00CD0C66 /* DataService.swift */; };
 		EB510DD0242CD6FE00CD0C66 /* ChangePhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB510DCF242CD6FE00CD0C66 /* ChangePhoneViewController.swift */; };
+		EB5B7719243343D40039ED6D /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B7718243343D40039ED6D /* ServiceViewController.swift */; };
+		EB5B771E2433490B0039ED6D /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B771C2433490B0039ED6D /* ServiceCell.swift */; };
+		EB5B771F2433490B0039ED6D /* ServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5B771D2433490B0039ED6D /* ServiceCell.xib */; };
+		EB5B7721243376010039ED6D /* NetworkServiceServiceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B7720243376010039ED6D /* NetworkServiceServiceList.swift */; };
+		EB5B7723243379D40039ED6D /* TariffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B7722243379D40039ED6D /* TariffModel.swift */; };
+		EB5B772524338BB10039ED6D /* TariffControllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B772424338BB10039ED6D /* TariffControllViewController.swift */; };
+		EB5B7728243399CC0039ED6D /* TariffsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B7726243399CC0039ED6D /* TariffsCell.swift */; };
+		EB5B7729243399CC0039ED6D /* TariffsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5B7727243399CC0039ED6D /* TariffsCell.xib */; };
+		EB5B772E24348DBA0039ED6D /* PhoneLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B772C24348DBA0039ED6D /* PhoneLabelCell.swift */; };
+		EB5B772F24348DBA0039ED6D /* PhoneLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5B772D24348DBA0039ED6D /* PhoneLabelCell.xib */; };
+		EB5B77322434AB1D0039ED6D /* PhoneLabelPlusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B77302434AB1D0039ED6D /* PhoneLabelPlusCell.swift */; };
+		EB5B77332434AB1D0039ED6D /* PhoneLabelPlusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5B77312434AB1D0039ED6D /* PhoneLabelPlusCell.xib */; };
+		EB5B77352434B2D50039ED6D /* ChangeTariffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B77342434B2D50039ED6D /* ChangeTariffViewController.swift */; };
+		EB5B77382434BA630039ED6D /* ButtonsServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B77362434BA630039ED6D /* ButtonsServiceCell.swift */; };
+		EB5B77392434BA630039ED6D /* ButtonsServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5B77372434BA630039ED6D /* ButtonsServiceCell.xib */; };
+		EB5B773C2434BC390039ED6D /* infoDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B773A2434BC390039ED6D /* infoDateCell.swift */; };
+		EB5B773D2434BC390039ED6D /* infoDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5B773B2434BC390039ED6D /* infoDateCell.xib */; };
 		EB93B27D241F991E0082022E /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93B27C241F991E0082022E /* PersonModel.swift */; };
 		EB93B27F241FE01A0082022E /* NetworkServiceAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */; };
 		EBA7FFD82427BF6200DAACF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */; };
@@ -67,6 +84,23 @@
 		EB2419E624261D4B007438D2 /* LabelsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LabelsCell.xib; path = LabelsCell/LabelsCell.xib; sourceTree = "<group>"; };
 		EB510DCD242BB40D00CD0C66 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		EB510DCF242CD6FE00CD0C66 /* ChangePhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePhoneViewController.swift; sourceTree = "<group>"; };
+		EB5B7718243343D40039ED6D /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
+		EB5B771C2433490B0039ED6D /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
+		EB5B771D2433490B0039ED6D /* ServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceCell.xib; sourceTree = "<group>"; };
+		EB5B7720243376010039ED6D /* NetworkServiceServiceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceServiceList.swift; sourceTree = "<group>"; };
+		EB5B7722243379D40039ED6D /* TariffModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TariffModel.swift; sourceTree = "<group>"; };
+		EB5B772424338BB10039ED6D /* TariffControllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TariffControllViewController.swift; sourceTree = "<group>"; };
+		EB5B7726243399CC0039ED6D /* TariffsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TariffsCell.swift; sourceTree = "<group>"; };
+		EB5B7727243399CC0039ED6D /* TariffsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TariffsCell.xib; sourceTree = "<group>"; };
+		EB5B772C24348DBA0039ED6D /* PhoneLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLabelCell.swift; sourceTree = "<group>"; };
+		EB5B772D24348DBA0039ED6D /* PhoneLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneLabelCell.xib; sourceTree = "<group>"; };
+		EB5B77302434AB1D0039ED6D /* PhoneLabelPlusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLabelPlusCell.swift; sourceTree = "<group>"; };
+		EB5B77312434AB1D0039ED6D /* PhoneLabelPlusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneLabelPlusCell.xib; sourceTree = "<group>"; };
+		EB5B77342434B2D50039ED6D /* ChangeTariffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTariffViewController.swift; sourceTree = "<group>"; };
+		EB5B77362434BA630039ED6D /* ButtonsServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsServiceCell.swift; sourceTree = "<group>"; };
+		EB5B77372434BA630039ED6D /* ButtonsServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsServiceCell.xib; sourceTree = "<group>"; };
+		EB5B773A2434BC390039ED6D /* infoDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoDateCell.swift; sourceTree = "<group>"; };
+		EB5B773B2434BC390039ED6D /* infoDateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = infoDateCell.xib; sourceTree = "<group>"; };
 		EB93B27C241F991E0082022E /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkServiceAuth.swift; path = VladLink/DataModel/NetworkServiceAuth.swift; sourceTree = SOURCE_ROOT; };
 		EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -119,7 +153,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EB2419AE2424AE31007438D2 /* ViewController */ = {
+		EB2419AE2424AE31007438D2 /* ViewControllerFirstEnter */ = {
 			isa = PBXGroup;
 			children = (
 				EB2419D82424F003007438D2 /* BillCell.swift */,
@@ -129,7 +163,58 @@
 				EB2419E524261D4B007438D2 /* LabelsCell.swift */,
 				EB2419E624261D4B007438D2 /* LabelsCell.xib */,
 			);
-			path = ViewController;
+			path = ViewControllerFirstEnter;
+			sourceTree = "<group>";
+		};
+		EB5B771B243348D80039ED6D /* ViewControllerServiceCells */ = {
+			isa = PBXGroup;
+			children = (
+				EB5B771C2433490B0039ED6D /* ServiceCell.swift */,
+				EB5B771D2433490B0039ED6D /* ServiceCell.xib */,
+				EB5B7726243399CC0039ED6D /* TariffsCell.swift */,
+				EB5B7727243399CC0039ED6D /* TariffsCell.xib */,
+				EB5B772C24348DBA0039ED6D /* PhoneLabelCell.swift */,
+				EB5B772D24348DBA0039ED6D /* PhoneLabelCell.xib */,
+				EB5B77302434AB1D0039ED6D /* PhoneLabelPlusCell.swift */,
+				EB5B77312434AB1D0039ED6D /* PhoneLabelPlusCell.xib */,
+				EB5B77362434BA630039ED6D /* ButtonsServiceCell.swift */,
+				EB5B77372434BA630039ED6D /* ButtonsServiceCell.xib */,
+				EB5B773A2434BC390039ED6D /* infoDateCell.swift */,
+				EB5B773B2434BC390039ED6D /* infoDateCell.xib */,
+			);
+			path = ViewControllerServiceCells;
+			sourceTree = "<group>";
+		};
+		EB73EEEE243730C700398521 /* FirstAppend */ = {
+			isa = PBXGroup;
+			children = (
+				EBB3DE91241CA28F004247F8 /* GreetingViewController.swift */,
+				EBB3DEA7241CE3B3004247F8 /* AddPhoneViewController.swift */,
+				EBB3DEAB241E6227004247F8 /* PhoneViewController.swift */,
+				EBB3DEAD241E6238004247F8 /* MessageViewController.swift */,
+				EB2419A8242360B5007438D2 /* FirstEnterViewController.swift */,
+			);
+			path = FirstAppend;
+			sourceTree = "<group>";
+		};
+		EB73EEEF243730F400398521 /* ChangePhone */ = {
+			isa = PBXGroup;
+			children = (
+				EB510DCF242CD6FE00CD0C66 /* ChangePhoneViewController.swift */,
+				EB04B02B242CEB9D006CC8CD /* CallChangeViewController.swift */,
+				EB04B02D242CFAA6006CC8CD /* MessageChangeViewController.swift */,
+			);
+			path = ChangePhone;
+			sourceTree = "<group>";
+		};
+		EB73EEF02437311000398521 /* ServiceTariff */ = {
+			isa = PBXGroup;
+			children = (
+				EB5B7718243343D40039ED6D /* ServiceViewController.swift */,
+				EB5B772424338BB10039ED6D /* TariffControllViewController.swift */,
+				EB5B77342434B2D50039ED6D /* ChangeTariffViewController.swift */,
+			);
+			path = ServiceTariff;
 			sourceTree = "<group>";
 		};
 		EB93B27B241F99030082022E /* DataModel */ = {
@@ -138,6 +223,7 @@
 				EB93B27C241F991E0082022E /* PersonModel.swift */,
 				EB2419AC2423A274007438D2 /* BillsModel.swift */,
 				EBC6898F243097CF00BB661C /* AdressModel.swift */,
+				EB5B7722243379D40039ED6D /* TariffModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -178,8 +264,9 @@
 			children = (
 				EBB3DE93241CA28F004247F8 /* Main.storyboard */,
 				EBB3DEA1241CA2BE004247F8 /* Views */,
-				EB2419AE2424AE31007438D2 /* ViewController */,
+				EB2419AE2424AE31007438D2 /* ViewControllerFirstEnter */,
 				EBA7FFD92427CAC800DAACF6 /* ViewControllerMain */,
+				EB5B771B243348D80039ED6D /* ViewControllerServiceCells */,
 				EBB3DEA6241CBCC0004247F8 /* Service */,
 				EB93B27B241F99030082022E /* DataModel */,
 				EBB3DE8F241CA28F004247F8 /* SceneDelegate.swift */,
@@ -194,15 +281,10 @@
 		EBB3DEA1241CA2BE004247F8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EBB3DE91241CA28F004247F8 /* GreetingViewController.swift */,
-				EBB3DEA7241CE3B3004247F8 /* AddPhoneViewController.swift */,
-				EBB3DEAB241E6227004247F8 /* PhoneViewController.swift */,
-				EBB3DEAD241E6238004247F8 /* MessageViewController.swift */,
-				EB2419A8242360B5007438D2 /* FirstEnterViewController.swift */,
+				EB73EEF02437311000398521 /* ServiceTariff */,
+				EB73EEEF243730F400398521 /* ChangePhone */,
+				EB73EEEE243730C700398521 /* FirstAppend */,
 				EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */,
-				EB510DCF242CD6FE00CD0C66 /* ChangePhoneViewController.swift */,
-				EB04B02B242CEB9D006CC8CD /* CallChangeViewController.swift */,
-				EB04B02D242CFAA6006CC8CD /* MessageChangeViewController.swift */,
 				EB04B031242E51FF006CC8CD /* NewAdressViewController.swift */,
 			);
 			path = Views;
@@ -216,6 +298,7 @@
 				EB03505E242A230600BADCE1 /* NetworkServiceChangePhone.swift */,
 				EB04B02F242E1B38006CC8CD /* NetworkServiceBillChange.swift */,
 				EB04B033242E5653006CC8CD /* NetworkServiceAdress.swift */,
+				EB5B7720243376010039ED6D /* NetworkServiceServiceList.swift */,
 				EB510DCD242BB40D00CD0C66 /* DataService.swift */,
 			);
 			path = Service;
@@ -281,13 +364,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB5B77332434AB1D0039ED6D /* PhoneLabelPlusCell.xib in Resources */,
 				EBA7FFDD2427CC3000DAACF6 /* PhoneCell.xib in Resources */,
+				EB5B771F2433490B0039ED6D /* ServiceCell.xib in Resources */,
 				EBA7FFE12427D9A800DAACF6 /* MainBillCell.xib in Resources */,
+				EB5B7729243399CC0039ED6D /* TariffsCell.xib in Resources */,
 				EB2419DB2424F003007438D2 /* BillCell.xib in Resources */,
+				EB5B772F24348DBA0039ED6D /* PhoneLabelCell.xib in Resources */,
 				EBA7FFE52427DA3A00DAACF6 /* MainButtonCell.xib in Resources */,
 				EBB3DE9A241CA295004247F8 /* LaunchScreen.storyboard in Resources */,
+				EB5B77392434BA630039ED6D /* ButtonsServiceCell.xib in Resources */,
 				EBB3DE97241CA295004247F8 /* Assets.xcassets in Resources */,
 				EB2419E42426197C007438D2 /* ButtonsCell.xib in Resources */,
+				EB5B773D2434BC390039ED6D /* infoDateCell.xib in Resources */,
 				EBB3DE95241CA28F004247F8 /* Main.storyboard in Resources */,
 				EB2419E824261D4B007438D2 /* LabelsCell.xib in Resources */,
 			);
@@ -342,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB5B77352434B2D50039ED6D /* ChangeTariffViewController.swift in Sources */,
 				EB510DD0242CD6FE00CD0C66 /* ChangePhoneViewController.swift in Sources */,
 				EB03505F242A230600BADCE1 /* NetworkServiceChangePhone.swift in Sources */,
 				EB2419DA2424F003007438D2 /* BillCell.swift in Sources */,
@@ -354,15 +444,25 @@
 				EBA7FFDC2427CC3000DAACF6 /* PhoneCell.swift in Sources */,
 				EB2419E32426197C007438D2 /* ButtonsCell.swift in Sources */,
 				EB04B02C242CEB9D006CC8CD /* CallChangeViewController.swift in Sources */,
+				EB5B773C2434BC390039ED6D /* infoDateCell.swift in Sources */,
+				EB5B77382434BA630039ED6D /* ButtonsServiceCell.swift in Sources */,
 				EBB3DEA8241CE3B3004247F8 /* AddPhoneViewController.swift in Sources */,
 				EB2419E724261D4B007438D2 /* LabelsCell.swift in Sources */,
+				EB5B7721243376010039ED6D /* NetworkServiceServiceList.swift in Sources */,
 				EB2419AB24237C0F007438D2 /* NetworkServiceAccount.swift in Sources */,
 				EBB3DE8E241CA28F004247F8 /* AppDelegate.swift in Sources */,
+				EB5B77322434AB1D0039ED6D /* PhoneLabelPlusCell.swift in Sources */,
 				EBA7FFE02427D9A800DAACF6 /* MainBillCell.swift in Sources */,
+				EB5B7728243399CC0039ED6D /* TariffsCell.swift in Sources */,
 				EBA7FFD82427BF6200DAACF6 /* MainViewController.swift in Sources */,
+				EB5B7723243379D40039ED6D /* TariffModel.swift in Sources */,
+				EB5B772E24348DBA0039ED6D /* PhoneLabelCell.swift in Sources */,
+				EB5B7719243343D40039ED6D /* ServiceViewController.swift in Sources */,
 				EB04B032242E51FF006CC8CD /* NewAdressViewController.swift in Sources */,
 				EB2419A9242360B5007438D2 /* FirstEnterViewController.swift in Sources */,
+				EB5B771E2433490B0039ED6D /* ServiceCell.swift in Sources */,
 				EB2419AD2423A274007438D2 /* BillsModel.swift in Sources */,
+				EB5B772524338BB10039ED6D /* TariffControllViewController.swift in Sources */,
 				EBB3DEAE241E6238004247F8 /* MessageViewController.swift in Sources */,
 				EB93B27D241F991E0082022E /* PersonModel.swift in Sources */,
 				EBA7FFE42427DA3A00DAACF6 /* MainButtonCell.swift in Sources */,

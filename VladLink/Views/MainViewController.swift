@@ -10,16 +10,21 @@ import Foundation
 import UIKit
 
 class MainViewController: UIViewController{
+    let network = JSONService()
     let person = PersonModel.sharedData
     let bill = BillModel.sharedData
+    let data = DataService()
     
     @IBOutlet weak var billList: UICollectionView!
     @IBOutlet weak var navBar: UINavigationBar!
     override func viewDidLoad() {
+        network.getBills(auth_token: person.auth_token)
         print(bill.bills)
         super.viewDidLoad()
         setView()
         setNavigationBanner()
+        data.updateData()
+        print(person.auth_token)
     }
     
     private func setView(){
@@ -67,6 +72,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainBillCell", for: indexPath) as! MainBillCell
             cell.setUp(number: indexPath.item - 1)
+            cell.delegate = self
             return cell
         }
     }
@@ -79,6 +85,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return CGSize(width: width, height: 230)
         }
     }
+    
 }
 
 extension MainViewController: PhoneCellDelegate{
@@ -100,6 +107,34 @@ extension MainViewController: MainButtonCellDelegate{
         print("newAdress")
         let vc = storyboard?.instantiateViewController(withIdentifier: "newAdressVC") as! NewAdressViewController
         self.present(vc, animated: true)
+    }
+}
+
+extension MainViewController: MainBillCellDelegate{
+    func goToPay(cell: MainBillCell) {
+        guard let indexPath = self.billList.indexPath(for: cell)?.row else {
+            return
+        }
+        
+        print("\(indexPath) go to pay")
+    }
+    
+    func goToService(cell: MainBillCell) {
+        guard let indexPath = self.billList.indexPath(for: cell)?.row else {
+            return
+        }
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ServiceVC") as! ServiceViewController
+        vc.number = indexPath - 1
+        self.present(vc, animated: true)
+        print("\(indexPath) go to service")
+    }
+    
+    func goToChat(cell: MainBillCell) {
+        guard let indexPath = self.billList.indexPath(for: cell)?.row else {
+            return
+        }
+        
+        print("\(indexPath) go to chat")
     }
     
 

@@ -117,7 +117,7 @@ class ChangePhoneNumber {
     }
     
     func postPhoneRequest(phoneNumber: String){
-        var semaphore = DispatchSemaphore (value: 0)
+        let semaphore = DispatchSemaphore (value: 0)
         struct answerReceive: Codable{
             var status: Int
             var data: dataReceive

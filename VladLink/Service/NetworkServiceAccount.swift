@@ -122,6 +122,7 @@ class JSONService{
                 let json = try JSONDecoder().decode(requestBill.self, from: data)
                 print("!!!!!!!!!!!!!!!!!!!!!!\(json)")
                //let json = try JSONSerialization.jsonObject(with: data, options: [])
+                self.billLoaded.bills.removeAll()
                 for number in 0..<json.data.count {
                     self.billLoaded.addedBill.balls = (json.data[number]?.balls)!
                     self.billLoaded.addedBill.bill = (json.data[number]?.bill)!

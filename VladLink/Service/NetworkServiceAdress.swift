@@ -32,7 +32,7 @@ class NewAdress{
             var count_item: Int
         }
         
-        var semaphore = DispatchSemaphore (value: 0)
+        let semaphore = DispatchSemaphore (value: 0)
         var request = URLRequest(url: URL(string: "https://test-api.vladlink.ru/v1/address/cities?select=id%2Csname&order=sname")!,timeoutInterval: Double.infinity)
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("\(person.auth_token)", forHTTPHeaderField: "Authorization")

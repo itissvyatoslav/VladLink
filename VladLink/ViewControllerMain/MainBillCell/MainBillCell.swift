@@ -8,8 +8,15 @@
 
 import UIKit
 
+protocol MainBillCellDelegate{
+    func goToPay(cell: MainBillCell)
+    func goToService(cell: MainBillCell)
+    func goToChat(cell: MainBillCell)
+}
+
 class MainBillCell: UICollectionViewCell {
     let bill = BillModel.sharedData
+    var delegate: MainBillCellDelegate?
     
     @IBOutlet weak var billNumber: UILabel!
     @IBOutlet weak var moneyLabel: UILabel!
@@ -17,6 +24,17 @@ class MainBillCell: UICollectionViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     
+    @IBAction func payAction(_ sender: Any) {
+        delegate?.goToPay(cell: self)
+    }
+    
+    @IBAction func serviceAction(_ sender: Any) {
+        delegate?.goToService(cell: self)
+    }
+    
+    @IBAction func chatAction(_ sender: Any) {
+        delegate?.goToChat(cell: self)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

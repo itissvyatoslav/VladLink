@@ -55,6 +55,9 @@
                         <state key="normal" title="УСЛУГИ">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
+                        <connections>
+                            <action selector="serviceAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="6IJ-TG-8VW"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKQ-Z5-P1L">
                         <rect key="frame" x="328" y="179" width="50" height="30"/>
@@ -65,6 +68,9 @@
                         <state key="normal" title="ЧАТ">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
+                        <connections>
+                            <action selector="chatAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="rad-hB-nv2"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BxD-sf-0aE">
                         <rect key="frame" x="8" y="179" width="90" height="30"/>
@@ -77,6 +83,9 @@
                         <state key="normal" title="ОПЛАТА">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
+                        <connections>
+                            <action selector="payAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="PDw-2B-uSS"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
