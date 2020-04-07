@@ -12,6 +12,7 @@ import  UIKit
 class ServiceViewController: UIViewController{
     let bill = BillModel.sharedData
     let service = ServiceList()
+    let tariff = TariffModel.sharedData
     
     @IBOutlet weak var serviceList: UICollectionView!
     @IBOutlet weak var infoServiceLabel: UILabel!
@@ -54,10 +55,46 @@ extension ServiceViewController: UICollectionViewDelegate, UICollectionViewDataS
 
 extension ServiceViewController: ServiceCellDelegate{
     func goControll(cell: ServiceCell) {
-        print("go controll")
-        let vc = storyboard?.instantiateViewController(withIdentifier: "TariffControllVC") as! TariffControllViewController
-        vc.number = number
-        service.getAllTariffs(number: number)
-        self.present(vc, animated: true)
+        let cellIndex = serviceList.indexPath(for: cell)!.row
+        if cellIndex == 0 {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "TariffControllVC") as! TariffControllViewController
+            vc.number = number
+            service.getAllTariffs(number: number)
+            self.present(vc, animated: true)
+        }
+        if cellIndex == 1 {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ServiceITVVC") as! ServiceITVViewController
+            vc.number = number
+            if tariff.products1.isEmpty || tariff.products2.isEmpty || tariff.productsCTV.isEmpty{
+                service.getProductServices(number: number)
+            }
+                service.getProductITV(number: number)
+            self.present(vc, animated: true)
+        }
+        if cellIndex == 2 {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ServiceCTVVC") as! ServiceCTVViewController
+            vc.number = number
+            if tariff.products1.isEmpty || tariff.products2.isEmpty || tariff.productsCTV.isEmpty{
+                service.getProductServices(number: number)
+            }
+            service.statusCTV(number: number)
+            self.present(vc, animated: true)
+        }
+        if cellIndex == 3 {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ServiceMoreTariffVC") as! ServiceMoreTariffViewController
+            vc.number = number
+            if tariff.products1.isEmpty || tariff.products2.isEmpty || tariff.productsCTV.isEmpty{
+                service.getProductServices(number: number)
+            }
+            self.present(vc, animated: true)
+        }
+        if cellIndex == 4 {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ServiceDeviceVC") as! ServiceDeviceViewController
+            vc.number = number
+            if !tariff.devices.isEmpty{
+                service.getDevices()
+            }
+            self.present(vc, animated: true)
+        }
     }
 }

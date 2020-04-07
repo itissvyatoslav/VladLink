@@ -32,5 +32,57 @@ class TariffModel {
         var tchange: String
     }
     
+    var products = [Product]()
+    var products1 = [Product]()
+    var products2 = [Product]()
+    var productsCTV = [Product]()
+    var productsITV = [ProductITV]()
+    
+    var addProduct = Product(id: "", name: "", is_active: "", on_deactive: "", can_add: "", days_gone: "", group_id: "", promo: "", cost: "", is_available: "")
+    
+    struct Product {
+        var id: String
+        var name: String
+        var is_active: String
+        var on_deactive: String
+        var can_add: String
+        var days_gone: String
+        var group_id: String
+        var promo: String
+        var cost: String
+        var is_available: String
+    }
+    
+    var addProductITV = ProductITV(id: "", name: "", is_active: "", price: "", free: "", days_gone: "", test_period: "")
+    
+    var status_msg = "Status Message"
+    
+    struct ProductITV {
+        var id: String
+        var name: String
+        var is_active: String
+        var price: String
+        var free: String
+        var days_gone: String
+        var test_period: String
+    }
+    
+    var devices = [Device]()
+    var addDevice = Device(id: "", device_name: "", device_model: "", description: "", cost: "", installment_plan: "", installment_cost: "", device_img: "", order_descr: "", order_descr_installment: "", sort: "")
+    
+    struct Device {
+        var id: String
+        var device_name: String
+        var device_model: String
+        var description: String
+        var cost: String
+        var installment_plan: String
+        var installment_cost: String
+        var device_img: String
+        var order_descr: String
+        var order_descr_installment: String
+        var sort: String
+    }
+    
     static let sharedData = TariffModel()
 }

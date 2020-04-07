@@ -68,10 +68,6 @@ class TariffsCell: UICollectionViewCell {
         ctvLabel.text = tariff.tariffs[number].channels_count_ctv
         localLabel.text = "\(tariff.tariffs[number].cost_local) ₽/мес"
         archiveLabel.text = "\(tariff.tariffs[number].cost_archive) ₽/мес"
-        //   if tariff.tariffs[number].can_ch == nil{
-        //       goButton.isHidden = true
-        //       statusLabel.isHidden = true
-        //   } else
         if  tariff.tariffs[number].activ == "t"{
             goButton.isHidden = true
             statusLabel.text = "ТЕКУЩИЙ"

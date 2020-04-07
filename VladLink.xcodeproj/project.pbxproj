@@ -42,6 +42,14 @@
 		EB5B77392434BA630039ED6D /* ButtonsServiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5B77372434BA630039ED6D /* ButtonsServiceCell.xib */; };
 		EB5B773C2434BC390039ED6D /* infoDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5B773A2434BC390039ED6D /* infoDateCell.swift */; };
 		EB5B773D2434BC390039ED6D /* infoDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB5B773B2434BC390039ED6D /* infoDateCell.xib */; };
+		EB73EEF22438A42200398521 /* ServiceITVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73EEF12438A42200398521 /* ServiceITVViewController.swift */; };
+		EB73EEF52438E42400398521 /* itvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73EEF32438E42400398521 /* itvCell.swift */; };
+		EB73EEF62438E42400398521 /* itvCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB73EEF42438E42400398521 /* itvCell.xib */; };
+		EB73EEF8243C554900398521 /* ServiceCTVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB73EEF7243C554900398521 /* ServiceCTVViewController.swift */; };
+		EB79ECC5243CC89F007C2F5D /* ServiceMoreTariffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79ECC4243CC89F007C2F5D /* ServiceMoreTariffViewController.swift */; };
+		EB79ECC7243CD661007C2F5D /* ServiceDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79ECC6243CD661007C2F5D /* ServiceDeviceViewController.swift */; };
+		EB79ECCA243CD789007C2F5D /* deviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79ECC8243CD789007C2F5D /* deviceCell.swift */; };
+		EB79ECCB243CD789007C2F5D /* deviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB79ECC9243CD789007C2F5D /* deviceCell.xib */; };
 		EB93B27D241F991E0082022E /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93B27C241F991E0082022E /* PersonModel.swift */; };
 		EB93B27F241FE01A0082022E /* NetworkServiceAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */; };
 		EBA7FFD82427BF6200DAACF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */; };
@@ -101,6 +109,14 @@
 		EB5B77372434BA630039ED6D /* ButtonsServiceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsServiceCell.xib; sourceTree = "<group>"; };
 		EB5B773A2434BC390039ED6D /* infoDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoDateCell.swift; sourceTree = "<group>"; };
 		EB5B773B2434BC390039ED6D /* infoDateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = infoDateCell.xib; sourceTree = "<group>"; };
+		EB73EEF12438A42200398521 /* ServiceITVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceITVViewController.swift; sourceTree = "<group>"; };
+		EB73EEF32438E42400398521 /* itvCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itvCell.swift; sourceTree = "<group>"; };
+		EB73EEF42438E42400398521 /* itvCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = itvCell.xib; sourceTree = "<group>"; };
+		EB73EEF7243C554900398521 /* ServiceCTVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCTVViewController.swift; sourceTree = "<group>"; };
+		EB79ECC4243CC89F007C2F5D /* ServiceMoreTariffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceMoreTariffViewController.swift; sourceTree = "<group>"; };
+		EB79ECC6243CD661007C2F5D /* ServiceDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDeviceViewController.swift; sourceTree = "<group>"; };
+		EB79ECC8243CD789007C2F5D /* deviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deviceCell.swift; sourceTree = "<group>"; };
+		EB79ECC9243CD789007C2F5D /* deviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = deviceCell.xib; sourceTree = "<group>"; };
 		EB93B27C241F991E0082022E /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkServiceAuth.swift; path = VladLink/DataModel/NetworkServiceAuth.swift; sourceTree = SOURCE_ROOT; };
 		EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +197,10 @@
 				EB5B77372434BA630039ED6D /* ButtonsServiceCell.xib */,
 				EB5B773A2434BC390039ED6D /* infoDateCell.swift */,
 				EB5B773B2434BC390039ED6D /* infoDateCell.xib */,
+				EB73EEF32438E42400398521 /* itvCell.swift */,
+				EB73EEF42438E42400398521 /* itvCell.xib */,
+				EB79ECC8243CD789007C2F5D /* deviceCell.swift */,
+				EB79ECC9243CD789007C2F5D /* deviceCell.xib */,
 			);
 			path = ViewControllerServiceCells;
 			sourceTree = "<group>";
@@ -213,6 +233,10 @@
 				EB5B7718243343D40039ED6D /* ServiceViewController.swift */,
 				EB5B772424338BB10039ED6D /* TariffControllViewController.swift */,
 				EB5B77342434B2D50039ED6D /* ChangeTariffViewController.swift */,
+				EB73EEF12438A42200398521 /* ServiceITVViewController.swift */,
+				EB73EEF7243C554900398521 /* ServiceCTVViewController.swift */,
+				EB79ECC4243CC89F007C2F5D /* ServiceMoreTariffViewController.swift */,
+				EB79ECC6243CD661007C2F5D /* ServiceDeviceViewController.swift */,
 			);
 			path = ServiceTariff;
 			sourceTree = "<group>";
@@ -379,6 +403,8 @@
 				EB5B773D2434BC390039ED6D /* infoDateCell.xib in Resources */,
 				EBB3DE95241CA28F004247F8 /* Main.storyboard in Resources */,
 				EB2419E824261D4B007438D2 /* LabelsCell.xib in Resources */,
+				EB79ECCB243CD789007C2F5D /* deviceCell.xib in Resources */,
+				EB73EEF62438E42400398521 /* itvCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +460,7 @@
 				EB5B77352434B2D50039ED6D /* ChangeTariffViewController.swift in Sources */,
 				EB510DD0242CD6FE00CD0C66 /* ChangePhoneViewController.swift in Sources */,
 				EB03505F242A230600BADCE1 /* NetworkServiceChangePhone.swift in Sources */,
+				EB73EEF22438A42200398521 /* ServiceITVViewController.swift in Sources */,
 				EB2419DA2424F003007438D2 /* BillCell.swift in Sources */,
 				EB93B27F241FE01A0082022E /* NetworkServiceAuth.swift in Sources */,
 				EB04B034242E5653006CC8CD /* NetworkServiceAdress.swift in Sources */,
@@ -449,6 +476,7 @@
 				EBB3DEA8241CE3B3004247F8 /* AddPhoneViewController.swift in Sources */,
 				EB2419E724261D4B007438D2 /* LabelsCell.swift in Sources */,
 				EB5B7721243376010039ED6D /* NetworkServiceServiceList.swift in Sources */,
+				EB73EEF52438E42400398521 /* itvCell.swift in Sources */,
 				EB2419AB24237C0F007438D2 /* NetworkServiceAccount.swift in Sources */,
 				EBB3DE8E241CA28F004247F8 /* AppDelegate.swift in Sources */,
 				EB5B77322434AB1D0039ED6D /* PhoneLabelPlusCell.swift in Sources */,
@@ -458,15 +486,19 @@
 				EB5B7723243379D40039ED6D /* TariffModel.swift in Sources */,
 				EB5B772E24348DBA0039ED6D /* PhoneLabelCell.swift in Sources */,
 				EB5B7719243343D40039ED6D /* ServiceViewController.swift in Sources */,
+				EB73EEF8243C554900398521 /* ServiceCTVViewController.swift in Sources */,
 				EB04B032242E51FF006CC8CD /* NewAdressViewController.swift in Sources */,
 				EB2419A9242360B5007438D2 /* FirstEnterViewController.swift in Sources */,
 				EB5B771E2433490B0039ED6D /* ServiceCell.swift in Sources */,
+				EB79ECC7243CD661007C2F5D /* ServiceDeviceViewController.swift in Sources */,
 				EB2419AD2423A274007438D2 /* BillsModel.swift in Sources */,
+				EB79ECCA243CD789007C2F5D /* deviceCell.swift in Sources */,
 				EB5B772524338BB10039ED6D /* TariffControllViewController.swift in Sources */,
 				EBB3DEAE241E6238004247F8 /* MessageViewController.swift in Sources */,
 				EB93B27D241F991E0082022E /* PersonModel.swift in Sources */,
 				EBA7FFE42427DA3A00DAACF6 /* MainButtonCell.swift in Sources */,
 				EB04B030242E1B38006CC8CD /* NetworkServiceBillChange.swift in Sources */,
+				EB79ECC5243CC89F007C2F5D /* ServiceMoreTariffViewController.swift in Sources */,
 				EBB3DE90241CA28F004247F8 /* SceneDelegate.swift in Sources */,
 				EB510DCE242BB40D00CD0C66 /* DataService.swift in Sources */,
 			);

@@ -54,7 +54,7 @@ class JSONAddPhoneVC{
     }
     
     func postPhoneRequest(phoneNumber: String){
-        var semaphore = DispatchSemaphore (value: 0)
+        let semaphore = DispatchSemaphore (value: 0)
         
         let parametr = ["phone": "\(phoneNumber)"]
         let parametrs = ["data": parametr]
@@ -98,7 +98,7 @@ class JSONAddPhoneVC{
     }
     
     func postPhoneAuth(){
-        var semaphore = DispatchSemaphore (value: 0)
+        let semaphore = DispatchSemaphore (value: 0)
         let queue = DispatchQueue.global()
         let parametr = ["phone": "\(person.phoneNumber)", "request_id": "\(person.request_id)"]
         let parametrs = ["data": parametr]
@@ -193,7 +193,7 @@ class JSONAddPhoneVC{
     }
     
     func postMessageAuth(phoneNumber: String, request_id: String, code: String) {
-        var semaphore = DispatchSemaphore (value: 0)
+        let semaphore = DispatchSemaphore (value: 0)
         
         guard let url = URL(string: "https://test-api.vladlink.ru/v1/auth/subscribers/authByCode/check") else {
             print("url error")

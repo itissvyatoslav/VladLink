@@ -20,5 +20,9 @@ class PhoneLabelCell: UICollectionViewCell {
     func setUpCell(number: String){
         phoneLabel.text = "Лицевой счёт: \(number)"
     }
+    
+    func setUpITV(){
+        phoneLabel.text = "Пакеты ИТВ"
+    }
 
 }
