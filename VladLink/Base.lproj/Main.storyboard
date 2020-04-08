@@ -322,15 +322,10 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="6FV-F2-QCF">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sI-Ed-xLZ">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4sI-Ed-xLZ">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </collectionViewCellContentView>
-                                        <constraints>
-                                            <constraint firstItem="4sI-Ed-xLZ" firstAttribute="leading" secondItem="6FV-F2-QCF" secondAttribute="leadingMargin" constant="-8" id="8cD-Bk-bLx"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="4sI-Ed-xLZ" secondAttribute="trailing" constant="-8" id="IkB-Za-fec"/>
-                                            <constraint firstItem="4sI-Ed-xLZ" firstAttribute="top" secondItem="6FV-F2-QCF" secondAttribute="topMargin" constant="-8" id="mr9-IY-LRO"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="4sI-Ed-xLZ" secondAttribute="bottom" constant="-8" id="w8c-Qc-XFN"/>
-                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -722,6 +717,9 @@
                                 <rect key="frame" x="20" y="164.5" width="374" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="+ 7 495 120-66-95"/>
+                                <connections>
+                                    <action selector="callAction:" destination="XVx-rX-fpG" eventType="touchUpInside" id="oXp-Oq-eVj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKN-y2-LJm">
                                 <rect key="frame" x="20" y="212.5" width="374" height="20.5"/>
@@ -735,6 +733,9 @@
                                 <state key="normal" title="ДАЛЕЕ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextViewController:" destination="XVx-rX-fpG" eventType="touchUpInside" id="lH4-B2-HpB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="202-pp-uIn">
                                 <rect key="frame" x="100" y="293" width="214" height="30"/>
@@ -742,6 +743,9 @@
                                 <state key="normal" title="НАЗАД">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="previousViewControllerAction:" destination="XVx-rX-fpG" eventType="touchUpInside" id="pgK-Wt-VK7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -770,6 +774,11 @@
                         <viewLayoutGuide key="safeArea" id="5bc-ol-X8y"/>
                     </view>
                     <navigationItem key="navigationItem" id="aUi-yh-Zcf"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="aKN-y2-LJm" id="dNW-3H-akM"/>
+                        <outlet property="phoneButton" destination="MWA-nC-WpI" id="c7x-py-7rL"/>
+                        <outlet property="phoneLabel" destination="SHb-PE-ZSn" id="5Mx-ma-VZM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ioH-bo-OUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

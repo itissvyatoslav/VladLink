@@ -55,6 +55,8 @@
 		EB79ECD2243DBBF0007C2F5D /* PaymentMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79ECD1243DBBF0007C2F5D /* PaymentMethodsViewController.swift */; };
 		EB79ECD6243DC630007C2F5D /* PaymentMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79ECD4243DC630007C2F5D /* PaymentMethodCell.swift */; };
 		EB79ECD7243DC630007C2F5D /* PaymentMethodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB79ECD5243DC630007C2F5D /* PaymentMethodCell.xib */; };
+		EB79ECDA243DF4D6007C2F5D /* historyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79ECD8243DF4D6007C2F5D /* historyCell.swift */; };
+		EB79ECDB243DF4D6007C2F5D /* historyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB79ECD9243DF4D6007C2F5D /* historyCell.xib */; };
 		EB93B27D241F991E0082022E /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93B27C241F991E0082022E /* PersonModel.swift */; };
 		EB93B27F241FE01A0082022E /* NetworkServiceAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */; };
 		EBA7FFD82427BF6200DAACF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */; };
@@ -127,6 +129,8 @@
 		EB79ECD1243DBBF0007C2F5D /* PaymentMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsViewController.swift; sourceTree = "<group>"; };
 		EB79ECD4243DC630007C2F5D /* PaymentMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodCell.swift; sourceTree = "<group>"; };
 		EB79ECD5243DC630007C2F5D /* PaymentMethodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodCell.xib; sourceTree = "<group>"; };
+		EB79ECD8243DF4D6007C2F5D /* historyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyCell.swift; sourceTree = "<group>"; };
+		EB79ECD9243DF4D6007C2F5D /* historyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = historyCell.xib; sourceTree = "<group>"; };
 		EB93B27C241F991E0082022E /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkServiceAuth.swift; path = VladLink/DataModel/NetworkServiceAuth.swift; sourceTree = SOURCE_ROOT; };
 		EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -264,6 +268,8 @@
 			children = (
 				EB79ECD4243DC630007C2F5D /* PaymentMethodCell.swift */,
 				EB79ECD5243DC630007C2F5D /* PaymentMethodCell.xib */,
+				EB79ECD8243DF4D6007C2F5D /* historyCell.swift */,
+				EB79ECD9243DF4D6007C2F5D /* historyCell.xib */,
 			);
 			path = ViewControllerPaymentCells;
 			sourceTree = "<group>";
@@ -430,6 +436,7 @@
 				EBA7FFE52427DA3A00DAACF6 /* MainButtonCell.xib in Resources */,
 				EBB3DE9A241CA295004247F8 /* LaunchScreen.storyboard in Resources */,
 				EB5B77392434BA630039ED6D /* ButtonsServiceCell.xib in Resources */,
+				EB79ECDB243DF4D6007C2F5D /* historyCell.xib in Resources */,
 				EBB3DE97241CA295004247F8 /* Assets.xcassets in Resources */,
 				EB2419E42426197C007438D2 /* ButtonsCell.xib in Resources */,
 				EB5B773D2434BC390039ED6D /* infoDateCell.xib in Resources */,
@@ -497,6 +504,7 @@
 				EB93B27F241FE01A0082022E /* NetworkServiceAuth.swift in Sources */,
 				EB04B034242E5653006CC8CD /* NetworkServiceAdress.swift in Sources */,
 				EBB3DE92241CA28F004247F8 /* GreetingViewController.swift in Sources */,
+				EB79ECDA243DF4D6007C2F5D /* historyCell.swift in Sources */,
 				EB04B02E242CFAA6006CC8CD /* MessageChangeViewController.swift in Sources */,
 				EBB3DEAC241E6227004247F8 /* PhoneViewController.swift in Sources */,
 				EBC68990243097CF00BB661C /* AdressModel.swift in Sources */,

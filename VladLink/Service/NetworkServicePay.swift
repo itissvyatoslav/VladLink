@@ -54,6 +54,7 @@ class BillService{
             do {
                 let json = try JSONDecoder().decode(answerReceive.self, from: data)
                 print(json)
+                self.pay.paymentMethods.removeAll()
                 for number in 0..<json.data.count {
                     self.pay.addPaymentMethods.id = json.data[number].id
                     self.pay.addPaymentMethods.key = json.data[number].key
@@ -65,9 +66,10 @@ class BillService{
                     self.pay.addPaymentMethods.data.info = json.data[number].data.info
                     self.pay.addPaymentMethods.order = json.data[number].order
                     for subNumber in 0..<json.data[number].show_in.count{
-                        self.pay.addPaymentMethods.show_in[subNumber] = json.data[number].show_in[subNumber]
+                        self.pay.addPaymentMethods.show_in.append(json.data[number].show_in[subNumber])
                     }
                     self.pay.addPaymentMethods.available_for = json.data[number].available_for
+                    self.pay.paymentMethods.append(self.pay.addPaymentMethods)
                 }
             } catch {
                 print(error)
@@ -76,5 +78,7 @@ class BillService{
         }
         task.resume()
         semaphore.wait()
+        
+        pay.addAnotherPayment()
     }
 }

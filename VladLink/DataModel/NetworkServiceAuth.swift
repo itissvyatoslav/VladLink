@@ -82,6 +82,7 @@ class JSONAddPhoneVC{
             do {
                 
                 let json = try JSONDecoder().decode(postMessageDataRequest.self, from: data)
+                print(json)
                 if json.status == 200 {
                     self.person.request_id = json.data!.requestid!
                     self.person.callPhoneNumber = json.data!.phone!

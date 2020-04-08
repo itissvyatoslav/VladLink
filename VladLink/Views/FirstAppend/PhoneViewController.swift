@@ -45,6 +45,7 @@ class PhoneViewController: UIViewController{
     }
     
     private func setLabels(){
+        print("!!!!!!!!!\(phone)")
         phoneLabel.text = "В течении 2-х минут позвоните с номера  \n\(phone)\nна бесплатный номер."
         infoLabel.text = "После набора соединение автоматически сбросится (звонок будет бесплатным для вас)."
         phoneButton.setTitle(phoneCall, for: .normal)

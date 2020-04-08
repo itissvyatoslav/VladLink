@@ -11,6 +11,7 @@ import UIKit
 
 class PaymentMethodsViewController: UIViewController{
     let bill = BillModel.sharedData
+    let pay = PayModel.sharedData
     
     var number = 0
     
@@ -22,6 +23,7 @@ class PaymentMethodsViewController: UIViewController{
     
     private func setView(){
         self.paymentList.register(UINib(nibName: "PhoneLabelCell", bundle: nil), forCellWithReuseIdentifier: "PhoneLabelCell")
+        self.paymentList.register(UINib(nibName: "PaymentMethodCell", bundle: nil), forCellWithReuseIdentifier: "PaymentMethodCell")
         paymentList.delegate = self
         paymentList.dataSource = self
     }
@@ -29,16 +31,28 @@ class PaymentMethodsViewController: UIViewController{
 
 extension PaymentMethodsViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        print(pay.paymentMethods.count + 1)
+        return pay.paymentMethods.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-      //if indexPath.item == 0 {
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhoneLabelCell", for: indexPath) as! PhoneLabelCell
-      cell.setUpCell(number: bill.bills[number].id)
-      return cell
-     //   }
+        if indexPath.item == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhoneLabelCell", for: indexPath) as! PhoneLabelCell
+            cell.setUpCell(number: bill.bills[number].id)
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PaymentMethodCell", for: indexPath) as! PaymentMethodCell
+            cell.setCell(indexPath.item - 1)
+            return cell
+        }
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+        let width = UIScreen.main.bounds.size.width - 20
+        if indexPath.item == 0{
+            return CGSize(width: width, height: 40)
+        } else {
+            return CGSize(width: 10, height: 80)
+        }
+    }
 }
