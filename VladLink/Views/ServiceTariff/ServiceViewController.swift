@@ -21,7 +21,6 @@ class ServiceViewController: UIViewController{
     
     
     override func viewDidLoad() {
-        print("Ima bich ima boss")
         super.viewDidLoad()
         setView()
     }
@@ -91,7 +90,7 @@ extension ServiceViewController: ServiceCellDelegate{
         if cellIndex == 4 {
             let vc = storyboard?.instantiateViewController(withIdentifier: "ServiceDeviceVC") as! ServiceDeviceViewController
             vc.number = number
-            if !tariff.devices.isEmpty{
+            if tariff.devices.isEmpty{
                 service.getDevices()
             }
             self.present(vc, animated: true)

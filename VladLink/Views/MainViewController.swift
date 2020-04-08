@@ -14,6 +14,7 @@ class MainViewController: UIViewController{
     let person = PersonModel.sharedData
     let bill = BillModel.sharedData
     let data = DataService()
+    let payment = BillService()
     
     @IBOutlet weak var billList: UICollectionView!
     @IBOutlet weak var navBar: UINavigationBar!
@@ -115,7 +116,10 @@ extension MainViewController: MainBillCellDelegate{
         guard let indexPath = self.billList.indexPath(for: cell)?.row else {
             return
         }
-        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "PaymentMethodsVC") as! PaymentMethodsViewController
+        vc.number = indexPath - 1
+        payment.getPayList(number: vc.number)
+        self.present(vc, animated: true)
         print("\(indexPath) go to pay")
     }
     
@@ -136,6 +140,4 @@ extension MainViewController: MainBillCellDelegate{
         
         print("\(indexPath) go to chat")
     }
-    
-
 }

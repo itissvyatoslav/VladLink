@@ -23,6 +23,8 @@ class ServiceDeviceViewController: UIViewController{
     }
     
     private func setView(){
+        self.devicesList.register(UINib(nibName: "PhoneLabelCell", bundle: nil), forCellWithReuseIdentifier: "PhoneLabelCell")
+        self.devicesList.register(UINib(nibName: "deviceCell", bundle: nil), forCellWithReuseIdentifier: "deviceCell")
         devicesList.delegate = self
         devicesList.dataSource = self
     }
@@ -30,7 +32,7 @@ class ServiceDeviceViewController: UIViewController{
 
 extension ServiceDeviceViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tariff.devices.count
+        return tariff.devices.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -39,7 +41,7 @@ extension ServiceDeviceViewController: UICollectionViewDelegate, UICollectionVie
             cell.setUpCell(number: bill.bills[number].id)
             return cell
         } else {
-            if tariff.devices[indexPath.item - 1].installment_plan == "" {
+            if tariff.devices[indexPath.item - 1].installment_plan == nil {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deviceCell", for: indexPath) as! deviceCell
                 cell.setUpCell(indexPath.item - 1)
                 cell.delegate = self

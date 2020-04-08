@@ -50,6 +50,11 @@
 		EB79ECC7243CD661007C2F5D /* ServiceDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79ECC6243CD661007C2F5D /* ServiceDeviceViewController.swift */; };
 		EB79ECCA243CD789007C2F5D /* deviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79ECC8243CD789007C2F5D /* deviceCell.swift */; };
 		EB79ECCB243CD789007C2F5D /* deviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB79ECC9243CD789007C2F5D /* deviceCell.xib */; };
+		EB79ECCD243CE5C1007C2F5D /* NetworkServicePay.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79ECCC243CE5C1007C2F5D /* NetworkServicePay.swift */; };
+		EB79ECCF243CE65A007C2F5D /* PayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79ECCE243CE65A007C2F5D /* PayModel.swift */; };
+		EB79ECD2243DBBF0007C2F5D /* PaymentMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79ECD1243DBBF0007C2F5D /* PaymentMethodsViewController.swift */; };
+		EB79ECD6243DC630007C2F5D /* PaymentMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB79ECD4243DC630007C2F5D /* PaymentMethodCell.swift */; };
+		EB79ECD7243DC630007C2F5D /* PaymentMethodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB79ECD5243DC630007C2F5D /* PaymentMethodCell.xib */; };
 		EB93B27D241F991E0082022E /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93B27C241F991E0082022E /* PersonModel.swift */; };
 		EB93B27F241FE01A0082022E /* NetworkServiceAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */; };
 		EBA7FFD82427BF6200DAACF6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */; };
@@ -117,6 +122,11 @@
 		EB79ECC6243CD661007C2F5D /* ServiceDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDeviceViewController.swift; sourceTree = "<group>"; };
 		EB79ECC8243CD789007C2F5D /* deviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deviceCell.swift; sourceTree = "<group>"; };
 		EB79ECC9243CD789007C2F5D /* deviceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = deviceCell.xib; sourceTree = "<group>"; };
+		EB79ECCC243CE5C1007C2F5D /* NetworkServicePay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicePay.swift; sourceTree = "<group>"; };
+		EB79ECCE243CE65A007C2F5D /* PayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayModel.swift; sourceTree = "<group>"; };
+		EB79ECD1243DBBF0007C2F5D /* PaymentMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsViewController.swift; sourceTree = "<group>"; };
+		EB79ECD4243DC630007C2F5D /* PaymentMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodCell.swift; sourceTree = "<group>"; };
+		EB79ECD5243DC630007C2F5D /* PaymentMethodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentMethodCell.xib; sourceTree = "<group>"; };
 		EB93B27C241F991E0082022E /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		EB93B27E241FE01A0082022E /* NetworkServiceAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkServiceAuth.swift; path = VladLink/DataModel/NetworkServiceAuth.swift; sourceTree = SOURCE_ROOT; };
 		EBA7FFD72427BF6200DAACF6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +251,23 @@
 			path = ServiceTariff;
 			sourceTree = "<group>";
 		};
+		EB79ECD0243DBA79007C2F5D /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				EB79ECD1243DBBF0007C2F5D /* PaymentMethodsViewController.swift */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		EB79ECD3243DC3A1007C2F5D /* ViewControllerPaymentCells */ = {
+			isa = PBXGroup;
+			children = (
+				EB79ECD4243DC630007C2F5D /* PaymentMethodCell.swift */,
+				EB79ECD5243DC630007C2F5D /* PaymentMethodCell.xib */,
+			);
+			path = ViewControllerPaymentCells;
+			sourceTree = "<group>";
+		};
 		EB93B27B241F99030082022E /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +275,7 @@
 				EB2419AC2423A274007438D2 /* BillsModel.swift */,
 				EBC6898F243097CF00BB661C /* AdressModel.swift */,
 				EB5B7722243379D40039ED6D /* TariffModel.swift */,
+				EB79ECCE243CE65A007C2F5D /* PayModel.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -291,6 +319,7 @@
 				EB2419AE2424AE31007438D2 /* ViewControllerFirstEnter */,
 				EBA7FFD92427CAC800DAACF6 /* ViewControllerMain */,
 				EB5B771B243348D80039ED6D /* ViewControllerServiceCells */,
+				EB79ECD3243DC3A1007C2F5D /* ViewControllerPaymentCells */,
 				EBB3DEA6241CBCC0004247F8 /* Service */,
 				EB93B27B241F99030082022E /* DataModel */,
 				EBB3DE8F241CA28F004247F8 /* SceneDelegate.swift */,
@@ -305,6 +334,7 @@
 		EBB3DEA1241CA2BE004247F8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EB79ECD0243DBA79007C2F5D /* Payment */,
 				EB73EEF02437311000398521 /* ServiceTariff */,
 				EB73EEEF243730F400398521 /* ChangePhone */,
 				EB73EEEE243730C700398521 /* FirstAppend */,
@@ -323,6 +353,7 @@
 				EB04B02F242E1B38006CC8CD /* NetworkServiceBillChange.swift */,
 				EB04B033242E5653006CC8CD /* NetworkServiceAdress.swift */,
 				EB5B7720243376010039ED6D /* NetworkServiceServiceList.swift */,
+				EB79ECCC243CE5C1007C2F5D /* NetworkServicePay.swift */,
 				EB510DCD242BB40D00CD0C66 /* DataService.swift */,
 			);
 			path = Service;
@@ -393,6 +424,7 @@
 				EB5B771F2433490B0039ED6D /* ServiceCell.xib in Resources */,
 				EBA7FFE12427D9A800DAACF6 /* MainBillCell.xib in Resources */,
 				EB5B7729243399CC0039ED6D /* TariffsCell.xib in Resources */,
+				EB79ECD7243DC630007C2F5D /* PaymentMethodCell.xib in Resources */,
 				EB2419DB2424F003007438D2 /* BillCell.xib in Resources */,
 				EB5B772F24348DBA0039ED6D /* PhoneLabelCell.xib in Resources */,
 				EBA7FFE52427DA3A00DAACF6 /* MainButtonCell.xib in Resources */,
@@ -478,7 +510,9 @@
 				EB5B7721243376010039ED6D /* NetworkServiceServiceList.swift in Sources */,
 				EB73EEF52438E42400398521 /* itvCell.swift in Sources */,
 				EB2419AB24237C0F007438D2 /* NetworkServiceAccount.swift in Sources */,
+				EB79ECD2243DBBF0007C2F5D /* PaymentMethodsViewController.swift in Sources */,
 				EBB3DE8E241CA28F004247F8 /* AppDelegate.swift in Sources */,
+				EB79ECCF243CE65A007C2F5D /* PayModel.swift in Sources */,
 				EB5B77322434AB1D0039ED6D /* PhoneLabelPlusCell.swift in Sources */,
 				EBA7FFE02427D9A800DAACF6 /* MainBillCell.swift in Sources */,
 				EB5B7728243399CC0039ED6D /* TariffsCell.swift in Sources */,
@@ -488,12 +522,14 @@
 				EB5B7719243343D40039ED6D /* ServiceViewController.swift in Sources */,
 				EB73EEF8243C554900398521 /* ServiceCTVViewController.swift in Sources */,
 				EB04B032242E51FF006CC8CD /* NewAdressViewController.swift in Sources */,
+				EB79ECD6243DC630007C2F5D /* PaymentMethodCell.swift in Sources */,
 				EB2419A9242360B5007438D2 /* FirstEnterViewController.swift in Sources */,
 				EB5B771E2433490B0039ED6D /* ServiceCell.swift in Sources */,
 				EB79ECC7243CD661007C2F5D /* ServiceDeviceViewController.swift in Sources */,
 				EB2419AD2423A274007438D2 /* BillsModel.swift in Sources */,
 				EB79ECCA243CD789007C2F5D /* deviceCell.swift in Sources */,
 				EB5B772524338BB10039ED6D /* TariffControllViewController.swift in Sources */,
+				EB79ECCD243CE5C1007C2F5D /* NetworkServicePay.swift in Sources */,
 				EBB3DEAE241E6238004247F8 /* MessageViewController.swift in Sources */,
 				EB93B27D241F991E0082022E /* PersonModel.swift in Sources */,
 				EBA7FFE42427DA3A00DAACF6 /* MainButtonCell.swift in Sources */,

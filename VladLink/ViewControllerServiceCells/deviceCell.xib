@@ -16,21 +16,21 @@
                 <rect key="frame" x="0.0" y="0.0" width="425" height="86"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNh-yl-L3e">
-                        <rect key="frame" x="5" y="5" width="44.5" height="20.5"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNh-yl-L3e">
+                        <rect key="frame" x="5" y="5" width="282" height="19.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                         <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrS-4H-6lc">
-                        <rect key="frame" x="5" y="30.5" width="42" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrS-4H-6lc">
+                        <rect key="frame" x="5" y="29.5" width="282" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypL-nV-9iT">
-                        <rect key="frame" x="5" y="56" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypL-nV-9iT">
+                        <rect key="frame" x="5" y="52.5" width="282" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.43525004389999999" green="0.43532592060000003" blue="0.43523389099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -62,16 +62,21 @@
                     </button>
                 </subviews>
             </view>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
                 <constraint firstItem="DrS-4H-6lc" firstAttribute="top" secondItem="xNh-yl-L3e" secondAttribute="bottom" constant="5" id="3az-Ra-Rq8"/>
                 <constraint firstItem="uIq-EJ-LGt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="44q-xg-xE8"/>
                 <constraint firstItem="uII-Vl-yAp" firstAttribute="top" secondItem="uIq-EJ-LGt" secondAttribute="bottom" constant="10" id="DqD-Yg-aEK"/>
                 <constraint firstItem="ypL-nV-9iT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="EEF-SG-qWP"/>
+                <constraint firstItem="uIq-EJ-LGt" firstAttribute="leading" secondItem="DrS-4H-6lc" secondAttribute="trailing" constant="5" id="Hfd-Y2-yol"/>
                 <constraint firstItem="xNh-yl-L3e" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Ise-ek-Vm3"/>
                 <constraint firstItem="ypL-nV-9iT" firstAttribute="top" secondItem="DrS-4H-6lc" secondAttribute="bottom" constant="5" id="JCp-Eq-afP"/>
+                <constraint firstItem="uIq-EJ-LGt" firstAttribute="leading" secondItem="xNh-yl-L3e" secondAttribute="trailing" constant="5" id="d6P-jt-nC2"/>
                 <constraint firstAttribute="trailing" secondItem="uIq-EJ-LGt" secondAttribute="trailing" constant="3" id="fpe-yk-E6G"/>
                 <constraint firstItem="DrS-4H-6lc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="hAd-4F-kzZ"/>
+                <constraint firstItem="uII-Vl-yAp" firstAttribute="leading" secondItem="ypL-nV-9iT" secondAttribute="trailing" constant="5" id="nwt-8a-eYM"/>
                 <constraint firstItem="xNh-yl-L3e" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="oE0-xs-60X"/>
+                <constraint firstItem="ypL-nV-9iT" firstAttribute="top" relation="lessThanOrEqual" secondItem="xNh-yl-L3e" secondAttribute="bottom" constant="30.5" id="qhg-0m-pPU"/>
                 <constraint firstAttribute="trailing" secondItem="uII-Vl-yAp" secondAttribute="trailing" constant="3" id="yqx-jk-Cnx"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -83,7 +88,7 @@
                 <outlet property="planButton" destination="uII-Vl-yAp" id="nn6-Z6-s8L"/>
                 <outlet property="planLabel" destination="DrS-4H-6lc" id="iOe-KY-aXH"/>
             </connections>
-            <point key="canvasLocation" x="409.4202898550725" y="141.96428571428569"/>
+            <point key="canvasLocation" x="409.4202898550725" y="141.29464285714286"/>
         </collectionViewCell>
     </objects>
 </document>

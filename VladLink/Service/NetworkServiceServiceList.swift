@@ -519,28 +519,19 @@ class ServiceList{
         struct answerReceive: Codable{
             var status: Int
             var data: [dataReceive]
-            var paginate: Paginate
         }
         
         struct dataReceive: Codable{
             var id: String
             var device_name: String
-            var device_model: String
             var description: String
             var cost: String
-            var installment_plan: String
-            var installment_cost: String
+            var installment_plan: String?
+            var installment_cost: String?
             var device_img: String
             var order_descr: String
             var order_descr_installment: String
-            var sort: String
         }
-        
-        struct Paginate: Codable{
-            var count_page: String
-            var count_item: String
-        }
-        
         let semaphore = DispatchSemaphore (value: 0)
         var request = URLRequest(url: URL(string: "https://test-api.vladlink.ru/v1/devices")!,timeoutInterval: Double.infinity)
         request.addValue("application/json", forHTTPHeaderField: "Accept")
@@ -554,23 +545,22 @@ class ServiceList{
                 return
             }
             do {
-               //let json = try JSONSerialization.jsonObject(with: data, options: [])
-                self.tariff.devices.removeAll()
-                let json = try JSONDecoder().decode(answerReceive.self, from: data)
-                for number in 0..<json.data.count{
-                    self.tariff.addDevice.id = json.data[number].id
-                    self.tariff.addDevice.device_name = json.data[number].device_name
-                    self.tariff.addDevice.device_model = json.data[number].device_model
-                    self.tariff.addDevice.description = json.data[number].description
-                    self.tariff.addDevice.cost = json.data[number].cost
-                    self.tariff.addDevice.installment_plan = json.data[number].installment_plan
-                    self.tariff.addDevice.installment_cost = json.data[number].installment_cost
-                    self.tariff.addDevice.device_img = json.data[number].device_img
-                    self.tariff.addDevice.order_descr = json.data[number].order_descr
-                    self.tariff.addDevice.sort = json.data[number].sort
-                    self.tariff.addDevice.order_descr_installment = json.data[number].order_descr_installment
-                    self.tariff.devices.append(self.tariff.addDevice)
-                }
+            //  let json = try JSONSerialization.jsonObject(with: data, options: [])
+            //   print(json)
+             self.tariff.devices.removeAll()
+             let json = try JSONDecoder().decode(answerReceive.self, from: data)
+             for number in 0..<json.data.count{
+                 self.tariff.addDevice.id = json.data[number].id
+                 self.tariff.addDevice.device_name = json.data[number].device_name
+                 self.tariff.addDevice.description = json.data[number].description
+                 self.tariff.addDevice.cost = json.data[number].cost
+                 self.tariff.addDevice.installment_plan = json.data[number].installment_plan
+                 self.tariff.addDevice.installment_cost = json.data[number].installment_cost
+                 self.tariff.addDevice.device_img = json.data[number].device_img
+                 self.tariff.addDevice.order_descr = json.data[number].order_descr
+                 self.tariff.addDevice.order_descr_installment = json.data[number].order_descr_installment
+                 self.tariff.devices.append(self.tariff.addDevice)
+             }
             } catch {
                 print(error)
             }

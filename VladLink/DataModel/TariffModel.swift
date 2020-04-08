@@ -68,20 +68,18 @@ class TariffModel {
     }
     
     var devices = [Device]()
-    var addDevice = Device(id: "", device_name: "", device_model: "", description: "", cost: "", installment_plan: "", installment_cost: "", device_img: "", order_descr: "", order_descr_installment: "", sort: "")
+    var addDevice = Device(id: "", device_name: "", description: "", cost: "", installment_plan: "", installment_cost: "", device_img: "", order_descr: "", order_descr_installment: "")
     
     struct Device {
         var id: String
         var device_name: String
-        var device_model: String
         var description: String
         var cost: String
-        var installment_plan: String
-        var installment_cost: String
+        var installment_plan: String?
+        var installment_cost: String?
         var device_img: String
         var order_descr: String
         var order_descr_installment: String
-        var sort: String
     }
     
     static let sharedData = TariffModel()

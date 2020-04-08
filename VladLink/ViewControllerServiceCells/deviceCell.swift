@@ -37,15 +37,27 @@ class deviceCell: UICollectionViewCell {
     }
 
     func setUpCell(_ number: Int){
+        setLabels()
         nameLabel.text = tariff.devices[number].device_name
-        costLabel.text = tariff.devices[number].cost
+        costLabel.text = "Стоимость: \(tariff.devices[number].cost) ₽"
         planLabel.isHidden = true
         planButton.isHidden = true
     }
     
     func setUpCellPost(_ number: Int){
+        setLabels()
         nameLabel.text = tariff.devices[number].device_name
         costLabel.text = "Стоимость: \(tariff.devices[number].cost) ₽"
-        planLabel.text = "Рассрочка на \(tariff.devices[number].installment_plan) месяцев:\n\(tariff.devices[number].installment_cost) ₽/месяц"
+        planLabel.text = "Рассрочка на \(tariff.devices[number].installment_plan!) месяцев: \(tariff.devices[number].installment_cost!) ₽/месяц"
     }
+    
+    private func setLabels(){
+        nameLabel.adjustsFontSizeToFitWidth = true
+        nameLabel.sizeToFit()
+        planLabel.adjustsFontSizeToFitWidth = true
+        planLabel.sizeToFit()
+        costLabel.adjustsFontSizeToFitWidth = true
+        costLabel.sizeToFit()
+    }
+
 }
