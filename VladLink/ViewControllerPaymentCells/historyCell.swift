@@ -8,8 +8,18 @@
 
 import UIKit
 
+protocol historyCellDelegate {
+    func showHistory(cell: historyCell)
+}
+
 class historyCell: UICollectionViewCell {
+
     @IBOutlet weak var historyButton: UIButton!
+    @IBAction func historyAction(_ sender: Any) {
+        delegate?.showHistory(cell: self)
+    }
+    
+    var delegate: historyCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

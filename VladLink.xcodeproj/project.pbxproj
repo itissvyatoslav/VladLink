@@ -75,6 +75,9 @@
 		EBB3DEA8241CE3B3004247F8 /* AddPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DEA7241CE3B3004247F8 /* AddPhoneViewController.swift */; };
 		EBB3DEAC241E6227004247F8 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DEAB241E6227004247F8 /* PhoneViewController.swift */; };
 		EBB3DEAE241E6238004247F8 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3DEAD241E6238004247F8 /* MessageViewController.swift */; };
+		EBC3DB52243DFCE200532AF0 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3DB51243DFCE200532AF0 /* HistoryViewController.swift */; };
+		EBC3DB55243E1CF500532AF0 /* historyPaysCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3DB53243E1CF500532AF0 /* historyPaysCell.swift */; };
+		EBC3DB56243E1CF500532AF0 /* historyPaysCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBC3DB54243E1CF500532AF0 /* historyPaysCell.xib */; };
 		EBC68990243097CF00BB661C /* AdressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC6898F243097CF00BB661C /* AdressModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +154,9 @@
 		EBB3DEA7241CE3B3004247F8 /* AddPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneViewController.swift; sourceTree = "<group>"; };
 		EBB3DEAB241E6227004247F8 /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		EBB3DEAD241E6238004247F8 /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		EBC3DB51243DFCE200532AF0 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		EBC3DB53243E1CF500532AF0 /* historyPaysCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = historyPaysCell.swift; sourceTree = "<group>"; };
+		EBC3DB54243E1CF500532AF0 /* historyPaysCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = historyPaysCell.xib; sourceTree = "<group>"; };
 		EBC6898F243097CF00BB661C /* AdressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdressModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -259,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				EB79ECD1243DBBF0007C2F5D /* PaymentMethodsViewController.swift */,
+				EBC3DB51243DFCE200532AF0 /* HistoryViewController.swift */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -270,6 +277,8 @@
 				EB79ECD5243DC630007C2F5D /* PaymentMethodCell.xib */,
 				EB79ECD8243DF4D6007C2F5D /* historyCell.swift */,
 				EB79ECD9243DF4D6007C2F5D /* historyCell.xib */,
+				EBC3DB53243E1CF500532AF0 /* historyPaysCell.swift */,
+				EBC3DB54243E1CF500532AF0 /* historyPaysCell.xib */,
 			);
 			path = ViewControllerPaymentCells;
 			sourceTree = "<group>";
@@ -436,6 +445,7 @@
 				EBA7FFE52427DA3A00DAACF6 /* MainButtonCell.xib in Resources */,
 				EBB3DE9A241CA295004247F8 /* LaunchScreen.storyboard in Resources */,
 				EB5B77392434BA630039ED6D /* ButtonsServiceCell.xib in Resources */,
+				EBC3DB56243E1CF500532AF0 /* historyPaysCell.xib in Resources */,
 				EB79ECDB243DF4D6007C2F5D /* historyCell.xib in Resources */,
 				EBB3DE97241CA295004247F8 /* Assets.xcassets in Resources */,
 				EB2419E42426197C007438D2 /* ButtonsCell.xib in Resources */,
@@ -509,6 +519,7 @@
 				EBB3DEAC241E6227004247F8 /* PhoneViewController.swift in Sources */,
 				EBC68990243097CF00BB661C /* AdressModel.swift in Sources */,
 				EBA7FFDC2427CC3000DAACF6 /* PhoneCell.swift in Sources */,
+				EBC3DB52243DFCE200532AF0 /* HistoryViewController.swift in Sources */,
 				EB2419E32426197C007438D2 /* ButtonsCell.swift in Sources */,
 				EB04B02C242CEB9D006CC8CD /* CallChangeViewController.swift in Sources */,
 				EB5B773C2434BC390039ED6D /* infoDateCell.swift in Sources */,
@@ -544,6 +555,7 @@
 				EB04B030242E1B38006CC8CD /* NetworkServiceBillChange.swift in Sources */,
 				EB79ECC5243CC89F007C2F5D /* ServiceMoreTariffViewController.swift in Sources */,
 				EBB3DE90241CA28F004247F8 /* SceneDelegate.swift in Sources */,
+				EBC3DB55243E1CF500532AF0 /* historyPaysCell.swift in Sources */,
 				EB510DCE242BB40D00CD0C66 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

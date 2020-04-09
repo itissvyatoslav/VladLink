@@ -10,6 +10,8 @@ import UIKit
 
 class PaymentMethodCell: UICollectionViewCell {
     let pay = PayModel.sharedData
+    
+    let buttonsName = ["ОПЛАТИТЬ", "ОПЛАТИТЬ", "ОПЛАТИТЬ", "ИНСТРУКЦИЯ", "ИНСТРУКЦИЯ", "ВКЛЮЧИТЬ"]
 
     @IBAction func actionButton(_ sender: Any) {
         
@@ -25,6 +27,7 @@ class PaymentMethodCell: UICollectionViewCell {
     func setCell(_ number: Int){
         nameLabel.text = pay.paymentMethods[number].name
         descriptionLabel.text = pay.paymentMethods[number].descr
+        goButton.setTitle(buttonsName[number], for: .normal)
     }
 
 }

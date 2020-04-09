@@ -41,5 +41,16 @@ class PayModel {
         paymentMethods.insert(cards, at: 2)
         paymentMethods.insert(promise, at: 5)
     }
+    
+    struct payHistory {
+        var type: String
+        var date: String
+        var amount: String
+        var name: String
+    }
+    
+    var history = [payHistory]()
+    var addHistory = payHistory(type: "", date: "", amount: "", name: "")
+    
     static let sharedData = PayModel()
 }
